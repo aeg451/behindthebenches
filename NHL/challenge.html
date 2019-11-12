@@ -231,7 +231,7 @@
                   <li class="nav-heading ">
                      <span data-localize="sidebar.heading.HEADER">NHL</span>
                   </li>
-                  <li class=" ">
+                  <li class=" " style="line-height: 30px;">
                      <a href="./index.html" title="NHL" >
                        <img class="img-fluid" src="./../images/NHL.png" alt="NHL" style="width:2.25em; padding-right:3%;">
                         <span data-localize="sidebar.nav.NHL"> NHL</span>
@@ -250,7 +250,11 @@
                      </a>
                      <a href="./contracts.html" title="Contracts" >
                        <img class="img-fluid" src="./../images/contract.png" alt="Contracts" style="width:2.3em; padding-right:3%;">
-                        <span data-localize="sidebar.nav.StanleyCup"> Contracts</span>
+                        <span data-localize="sidebar.nav.Contracts"> Contracts</span>
+                     </a>
+                     <a href="./Analytics.html" title="Analytics" >
+                       <img class="img-fluid" src="./../images/analytics.png" alt="Analytics" style="width:2.3em; padding-right:3%;">
+                        <span data-localize="sidebar.nav.Analytics"> Analytics</span>
                      </a>
                      <a href="./challenge.html" title="Challenge" >
                        <img class="img-fluid" src="./../images/challenge.png" alt="Challenge" style="width:2.25em; padding-right:3%;">
@@ -353,6 +357,10 @@
                        <img class="img-fluid" src="./../images/SJS.png" alt="SJS" style="width:2.25em; padding-right:3%;">
                         <span data-localize="sidebar.nav.SJS"> SJS</span>
                      </a>
+                     <a href="#" title="SEA" >
+                       <img class="img-fluid" src="./../images/SEA.png" alt="SEA" style="width:1.73em; padding-right:3%;">
+                        <span data-localize="sidebar.nav.SEA">&nbsp; Seattle - <small><i>2021-2022</i></small></span>
+                     </a>
                       <a href="./STL.html" title="STL" >
                        <img class="img-fluid" src="./../images/STL.png" alt="STL" style="width:2.25em; padding-right:3%;">
                         <span data-localize="sidebar.nav.STL"> STL</span>
@@ -447,51 +455,63 @@
                 <table id="example" class="row-border" style="width:100%;">
                   <thead>
                     <tr id="filters" bgcolor="#006D75" style="background: #006D75; color: #ffffff; border-bottom: 1px solid #fff;">
-                      <th> </th>
-                      <th> </th>
-                      <th colspan="14"> </th>
+                      <th > </th>
+                      <th style="display:none;"> </th>
+                      <th > </th>
+                      <th colspan="18"> </th>
                     </tr>
-                    <tr bgcolor="#000" style="background: #000; color: #ffffff;">
+                    <tr bgcolor="#000" style="background: #000; color: #ffffff;line-height: 1.2;">
                       <th>Season</th>
                       <th>Team</th>
+                      <th style="display: none;">Team</th>
                       <th>Coach</th>
-                      <th>Total Challenges</th>
-                      <th>Total Wins</th>
-                      <th>Total Losses</th>
-                      <th>Total Win +/-</th>
-                      <th>Challenge Win%</th>
+                      <th>Total</th>
+                      <th>Wins</th>
+                      <th>Losses</th>
+                      <th>Win&nbsp;+/-</th>
+                      <th>Challenge Win&nbsp;%</th>
                       <th>Interference</th>
-                      <th>Interference Wins</th>
-                      <th>Interference Losses</th>
-                      <th>Interference +/-</th>
+                      <th>INT&nbsp;Wins</th>
+                      <th>INT&nbsp;Losses</th>
+                      <th>INT&nbsp;+/-</th>
                       <th>Offsides</th>
-                      <th>Offsides Wins</th>
-                      <th>Offsides Losses</th>
-                      <th>Offsides Win +/-</th>
+                      <th>OFF&nbsp;Wins</th>
+                      <th>OFF&nbsp;Losses</th>
+                      <th>OFF&nbsp;Win&nbsp;+/-</th>
+                      <th>Missed Stoppage</th>
+                      <th>MS&nbsp;Wins</th>
+                      <th>MS&nbsp;Losses</th>
+                      <th>MS&nbsp;+/-</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>ANA&emsp;</td>
+                  <tbody style="line-height: 1.2;">
+                  <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">ANA</span><img class="img-fluid" src="./../images/ANA.png" alt="ANA" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">ANA</td>
                       <td class="leftAlign">Bruce Boudreau</td>
+                      <td>4</td>
+                      <td>1</td>
+                      <td>3</td>
+                      <td>-2</td>
+                      <td>0.250</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
                       <td>3</td>
                       <td>1</td>
                       <td>2</td>
                       <td>-1</td>
-                      <td>0.333</td>
-                      <td>1</td>
                       <td>0</td>
-                      <td>1</td>
-                      <td>-1</td>
-                      <td>2</td>
-                      <td>1</td>
-                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
                       <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>ARI&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">ARI</span><img class="img-fluid" src="./../images/ARI.png" alt="ARI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">ARI</td>
                       <td class="leftAlign">Dave Tippett</td>
                       <td>7</td>
                       <td>3</td>
@@ -506,10 +526,15 @@
                       <td>1</td>
                       <td>0</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>BOS&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">BOS</span><img class="img-fluid" src="./../images/BOS.png" alt="BOS" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">BOS</td>
                       <td class="leftAlign">Claude Julien</td>
                       <td>10</td>
                       <td>1</td>
@@ -518,16 +543,21 @@
                       <td>0.100</td>
                       <td>8</td>
                       <td>1</td>
-                      <td>6</td>
-                      <td>-5</td>
+                      <td>7</td>
+                      <td>-6</td>
                       <td>2</td>
                       <td>0</td>
                       <td>2</td>
                       <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>BUF&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">BUF</span><img class="img-fluid" src="./../images/BUF.png" alt="BUF" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">BUF</td>
                       <td class="leftAlign">Dan Bylsma</td>
                       <td>13</td>
                       <td>3</td>
@@ -542,46 +572,15 @@
                       <td>1</td>
                       <td>3</td>
                       <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>CAR&emsp;</td>
-                      <td class="leftAlign">Bill Peters</td>
-                      <td>9</td>
-                      <td>3</td>
-                      <td>6</td>
-                      <td>-3</td>
-                      <td>0.333</td>
-                      <td>6</td>
-                      <td>2</td>
-                      <td>4</td>
-                      <td>-2</td>
-                      <td>3</td>
-                      <td>1</td>
-                      <td>2</td>
-                      <td>-1</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>CBJ&emsp;</td>
-                      <td class="leftAlign">John Tortorella</td>
-                      <td>9</td>
-                      <td>2</td>
-                      <td>7</td>
-                      <td>-5</td>
-                      <td>0.222</td>
-                      <td>4</td>
-                      <td>1</td>
-                      <td>3</td>
-                      <td>-2</td>
-                      <td>5</td>
-                      <td>1</td>
-                      <td>4</td>
-                      <td>-3</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>CGY&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C1GY</span><img class="img-fluid" src="./../images/CGY.png" alt="CGY" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CGY</td>
                       <td class="leftAlign">Bob Hartley</td>
                       <td>11</td>
                       <td>2</td>
@@ -596,11 +595,39 @@
                       <td>0</td>
                       <td>2</td>
                       <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>CHI&emsp;</td>
-                      <td class="leftAlign">Joel Qunneville</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C2AR</span><img class="img-fluid" src="./../images/CAR.png" alt="CAR" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CAR</td>
+                      <td class="leftAlign">Bill Peters</td>
+                      <td>9</td>
+                      <td>3</td>
+                      <td>6</td>
+                      <td>-3</td>
+                      <td>0.333</td>
+                      <td>6</td>
+                      <td>2</td>
+                      <td>4</td>
+                      <td>-2</td>
+                      <td>3</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C3HI</span><img class="img-fluid" src="./../images/CHI.png" alt="CHI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CHI</td>
+                      <td class="leftAlign">Joel Quenneville</td>
                       <td>4</td>
                       <td>1</td>
                       <td>3</td>
@@ -614,10 +641,15 @@
                       <td>0</td>
                       <td>1</td>
                       <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>COL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C4OL</span><img class="img-fluid" src="./../images/COL.png" alt="COL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">COL</td>
                       <td class="leftAlign">Patrick Roy</td>
                       <td>7</td>
                       <td>1</td>
@@ -632,10 +664,38 @@
                       <td>1</td>
                       <td>0</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>DAL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C5BJ</span><img class="img-fluid" src="./../images/CBJ.png" alt="CBJ" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CBJ</td>
+                      <td class="leftAlign">John Tortorella</td>
+                      <td>9</td>
+                      <td>2</td>
+                      <td>7</td>
+                      <td>-5</td>
+                      <td>0.222</td>
+                      <td>4</td>
+                      <td>1</td>
+                      <td>3</td>
+                      <td>-2</td>
+                      <td>5</td>
+                      <td>1</td>
+                      <td>4</td>
+                      <td>-3</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">DAL</span><img class="img-fluid" src="./../images/DAL.png" alt="DAL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">DAL</td>
                       <td class="leftAlign">Lindy Ruff</td>
                       <td>9</td>
                       <td>4</td>
@@ -650,10 +710,15 @@
                       <td>3</td>
                       <td>1</td>
                       <td>2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>DET&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">DET</span><img class="img-fluid" src="./../images/DET.png" alt="DET" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">DET</td>
                       <td class="leftAlign">Jeff Blashill</td>
                       <td>10</td>
                       <td>2</td>
@@ -668,10 +733,15 @@
                       <td>0</td>
                       <td>2</td>
                       <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>EDM&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">EDM</span><img class="img-fluid" src="./../images/EDM.png" alt="EDM" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">EDM</td>
                       <td class="leftAlign">Todd McLellan</td>
                       <td>9</td>
                       <td>3</td>
@@ -686,10 +756,15 @@
                       <td>2</td>
                       <td>2</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>FLA&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">FLA</span><img class="img-fluid" src="./../images/FLA.png" alt="FLA" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">FLA</td>
                       <td class="leftAlign">Gerard Gallant</td>
                       <td>12</td>
                       <td>6</td>
@@ -704,10 +779,15 @@
                       <td>4</td>
                       <td>3</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>LAK&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">LAK</span><img class="img-fluid" src="./../images/LAK.png" alt="LAK" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">LAK</td>
                       <td class="leftAlign">Darryl Sutter</td>
                       <td>6</td>
                       <td>1</td>
@@ -722,28 +802,15 @@
                       <td>1</td>
                       <td>3</td>
                       <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>MIN&emsp;</td>
-                      <td class="leftAlign">Mike Yeo</td>
-                      <td>8</td>
-                      <td>2</td>
-                      <td>6</td>
-                      <td>-4</td>
-                      <td>0.250</td>
-                      <td>4</td>
-                      <td>1</td>
-                      <td>3</td>
-                      <td>-2</td>
-                      <td>4</td>
-                      <td>1</td>
-                      <td>3</td>
-                      <td>-2</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>MIN&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">MIN</span><img class="img-fluid" src="./../images/MIN.png" alt="MIN" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">MIN</td>
                       <td class="leftAlign">John Torchetti</td>
                       <td>1</td>
                       <td>0</td>
@@ -758,10 +825,38 @@
                       <td>0</td>
                       <td>1</td>
                       <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>MTL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">MIN</span><img class="img-fluid" src="./../images/MIN.png" alt="MIN" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">MIN</td>
+                      <td class="leftAlign">Mike Yeo</td>
+                      <td>7</td>
+                      <td>2</td>
+                      <td>5</td>
+                      <td>-3</td>
+                      <td>0.286</td>
+                      <td>4</td>
+                      <td>1</td>
+                      <td>3</td>
+                      <td>-2</td>
+                      <td>3</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">MTL</span><img class="img-fluid" src="./../images/MTL.png" alt="MTL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">MTL</td>
                       <td class="leftAlign">Michel Therrien</td>
                       <td>6</td>
                       <td>2</td>
@@ -776,10 +871,38 @@
                       <td>0</td>
                       <td>0</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>NJD&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N1SH</span><img class="img-fluid" src="./../images/NSH.png" alt="NSH" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NSH</td>
+                      <td class="leftAlign">Peter Laviolette</td>
+                      <td>8</td>
+                      <td>1</td>
+                      <td>7</td>
+                      <td>-6</td>
+                      <td>0.125</td>
+                      <td>6</td>
+                      <td>1</td>
+                      <td>5</td>
+                      <td>-4</td>
+                      <td>2</td>
+                      <td>0</td>
+                      <td>2</td>
+                      <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N2JD</span><img class="img-fluid" src="./../images/NJD.png" alt="NJD" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NJD</td>
                       <td class="leftAlign">John Hynes</td>
                       <td>4</td>
                       <td>1</td>
@@ -794,28 +917,15 @@
                       <td>0</td>
                       <td>0</td>
                       <td>0</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>NSH&emsp;</td>
-                      <td class="leftAlign">Peter Laviolette</td>
-                      <td>8</td>
-                      <td>1</td>
-                      <td>7</td>
-                      <td>-6</td>
-                      <td>0.125</td>
-                      <td>5</td>
-                      <td>1</td>
-                      <td>4</td>
-                      <td>-3</td>
-                      <td>2</td>
                       <td>0</td>
-                      <td>2</td>
-                      <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>NYI&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N3YI</span><img class="img-fluid" src="./../images/NYI.png" alt="NYI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NYI</td>
                       <td class="leftAlign">Jack Capuano</td>
                       <td>2</td>
                       <td>0</td>
@@ -830,10 +940,15 @@
                       <td>0</td>
                       <td>0</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>NYR&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N4YR</span><img class="img-fluid" src="./../images/NYR.png" alt="NYR" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NYR</td>
                       <td class="leftAlign">Alain Vigneault</td>
                       <td>8</td>
                       <td>3</td>
@@ -848,10 +963,15 @@
                       <td>2</td>
                       <td>1</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>OTT&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">OTT</span><img class="img-fluid" src="./../images/OTT.png" alt="OTT" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">OTT</td>
                       <td class="leftAlign">Dave Cameron</td>
                       <td>8</td>
                       <td>3</td>
@@ -866,10 +986,15 @@
                       <td>1</td>
                       <td>2</td>
                       <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>PHI&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">PHI</span><img class="img-fluid" src="./../images/PHI.png" alt="PHI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">PHI</td>
                       <td class="leftAlign">Dave Hakstol</td>
                       <td>6</td>
                       <td>3</td>
@@ -884,10 +1009,15 @@
                       <td>2</td>
                       <td>0</td>
                       <td>2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>PIT&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">PIT</span><img class="img-fluid" src="./../images/PIT.png" alt="PIT" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">PIT</td>
                       <td class="leftAlign">Mike Sullivan</td>
                       <td>4</td>
                       <td>1</td>
@@ -902,11 +1032,16 @@
                       <td>1</td>
                       <td>0</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>SJS&emsp;</td>
-                      <td class="leftAlign">Pete DeBoer</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">SJS</span><img class="img-fluid" src="./../images/SJS.png" alt="SJS" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">SJS</td>
+                      <td class="leftAlign">Peter DeBoer</td>
                       <td>15</td>
                       <td>3</td>
                       <td>12</td>
@@ -920,10 +1055,15 @@
                       <td>1</td>
                       <td>6</td>
                       <td>-5</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>STL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">STL</span><img class="img-fluid" src="./../images/STL.png" alt="STL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">STL</td>
                       <td class="leftAlign">Ken Hitchcock</td>
                       <td>3</td>
                       <td>0</td>
@@ -938,10 +1078,15 @@
                       <td>0</td>
                       <td>0</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>TBL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">TBL</span><img class="img-fluid" src="./../images/TBL.png" alt="TBL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">TBL</td>
                       <td class="leftAlign">Jon Cooper</td>
                       <td>5</td>
                       <td>1</td>
@@ -956,11 +1101,16 @@
                       <td>0</td>
                       <td>1</td>
                       <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>TOR&emsp;</td>
-                      <td class="leftAlign">Mike Babock</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">TOR</span><img class="img-fluid" src="./../images/TOR.png" alt="TOR" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">TOR</td>
+                      <td class="leftAlign">Mike Babcock</td>
                       <td>16</td>
                       <td>8</td>
                       <td>8</td>
@@ -974,10 +1124,15 @@
                       <td>4</td>
                       <td>1</td>
                       <td>3</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>VAN&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">VAN</span><img class="img-fluid" src="./../images/VAN.png" alt="VAN" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">VAN</td>
                       <td class="leftAlign">Willie Desjardins</td>
                       <td>8</td>
                       <td>2</td>
@@ -992,28 +1147,15 @@
                       <td>2</td>
                       <td>3</td>
                       <td>-1</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>WPG&emsp;</td>
-                      <td class="leftAlign">Paul Maurice</td>
-                      <td>4</td>
-                      <td>1</td>
-                      <td>3</td>
-                      <td>-2</td>
-                      <td>0.250</td>
-                      <td>3</td>
-                      <td>1</td>
-                      <td>2</td>
-                      <td>-1</td>
-                      <td>1</td>
                       <td>0</td>
-                      <td>1</td>
-                      <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2015-16</td>
-                      <td>WSH&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">W1SH</span><img class="img-fluid" src="./../images/WSH.png" alt="WSH" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">WSH</td>
                       <td class="leftAlign">Barry Trotz</td>
                       <td>8</td>
                       <td>2</td>
@@ -1028,10 +1170,61 @@
                       <td>2</td>
                       <td>4</td>
                       <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>ANA&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">W2PG</span><img class="img-fluid" src="./../images/WPG.png" alt="WPG" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">WPG</td>
+                      <td class="leftAlign">Paul Maurice</td>
+                      <td>4</td>
+                      <td>1</td>
+                      <td>3</td>
+                      <td>-2</td>
+                      <td>0.250</td>
+                      <td>3</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>-1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2015-2016</td>
+                      <td class="leftAlign"><span style="font-size: 0;">WWW League</span><img class="img-fluid" src="./../images/NHL.png" alt="NHL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">League</td>
+                      <td class="leftAlign">N/A</td>
+                      <td>10</td>
+                      <td>1</td>
+                      <td>9</td>
+                      <td>-8</td>
+                      <td>0.100</td>
+                      <td>2</td>
+                      <td>0</td>
+                      <td>2</td>
+                      <td>-2</td>
+                      <td>8</td>
+                      <td>1</td>
+                      <td>7</td>
+                      <td>-6</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">ANA</span><img class="img-fluid" src="./../images/ANA.png" alt="ANA" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">ANA</td>
                       <td class="leftAlign">Randy Carlyle</td>
                       <td>7</td>
                       <td>2</td>
@@ -1046,10 +1239,15 @@
                       <td>0</td>
                       <td>2</td>
                       <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>ARI&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">ARI</span><img class="img-fluid" src="./../images/ARI.png" alt="ARI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">ARI</td>
                       <td class="leftAlign">Dave Tippett</td>
                       <td>8</td>
                       <td>2</td>
@@ -1064,28 +1262,15 @@
                       <td>1</td>
                       <td>2</td>
                       <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>BOS&emsp;</td>
-                      <td class="leftAlign">Claude Julien</td>
-                      <td>5</td>
-                      <td>0</td>
-                      <td>5</td>
-                      <td>-5</td>
-                      <td>0.000</td>
-                      <td>3</td>
-                      <td>0</td>
-                      <td>3</td>
-                      <td>-3</td>
-                      <td>2</td>
-                      <td>0</td>
-                      <td>2</td>
-                      <td>-2</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>BOS&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">BOS</span><img class="img-fluid" src="./../images/BOS.png" alt="BOS" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">BOS</td>
                       <td class="leftAlign">Bruce Cassidy</td>
                       <td>3</td>
                       <td>1</td>
@@ -1100,10 +1285,38 @@
                       <td>0</td>
                       <td>1</td>
                       <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>BUF&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">BOS</span><img class="img-fluid" src="./../images/BOS.png" alt="BOS" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">BOS</td>
+                      <td class="leftAlign">Claude Julien</td>
+                      <td>5</td>
+                      <td>0</td>
+                      <td>5</td>
+                      <td>-5</td>
+                      <td>0.000</td>
+                      <td>3</td>
+                      <td>0</td>
+                      <td>3</td>
+                      <td>-3</td>
+                      <td>2</td>
+                      <td>0</td>
+                      <td>2</td>
+                      <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">BUF</span><img class="img-fluid" src="./../images/BUF.png" alt="BUF" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">BUF</td>
                       <td class="leftAlign">Dan Bylsma</td>
                       <td>11</td>
                       <td>2</td>
@@ -1118,10 +1331,38 @@
                       <td>1</td>
                       <td>3</td>
                       <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>CAR&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C1GY</span><img class="img-fluid" src="./../images/CGY.png" alt="CGY" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CGY</td>
+                      <td class="leftAlign">Glen Gulutzan</td>
+                      <td>10</td>
+                      <td>2</td>
+                      <td>8</td>
+                      <td>-6</td>
+                      <td>0.200</td>
+                      <td>8</td>
+                      <td>2</td>
+                      <td>6</td>
+                      <td>-4</td>
+                      <td>2</td>
+                      <td>0</td>
+                      <td>2</td>
+                      <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C2AR</span><img class="img-fluid" src="./../images/CAR.png" alt="CAR" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CAR</td>
                       <td class="leftAlign">Bill Peters</td>
                       <td>14</td>
                       <td>0</td>
@@ -1136,47 +1377,16 @@
                       <td>0</td>
                       <td>8</td>
                       <td>-8</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>CBJ&emsp;</td>
-                      <td class="leftAlign">John Tortorella</td>
-                      <td>11</td>
-                      <td>4</td>
-                      <td>7</td>
-                      <td>-3</td>
-                      <td>0.364</td>
-                      <td>2</td>
-                      <td>2</td>
                       <td>0</td>
-                      <td>2</td>
-                      <td>9</td>
-                      <td>2</td>
-                      <td>7</td>
-                      <td>-5</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>CGY&emsp;</td>
-                      <td class="leftAlign">Glen Gulutzan</td>
-                      <td>10</td>
-                      <td>2</td>
-                      <td>8</td>
-                      <td>-6</td>
-                      <td>0.200</td>
-                      <td>8</td>
-                      <td>2</td>
-                      <td>6</td>
-                      <td>-4</td>
-                      <td>2</td>
                       <td>0</td>
-                      <td>2</td>
-                      <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>CHI&emsp;</td>
-                      <td class="leftAlign">Joel Qunneville</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C3HI</span><img class="img-fluid" src="./../images/CHI.png" alt="CHI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CHI</td>
+                      <td class="leftAlign">Joel Quenneville</td>
                       <td>8</td>
                       <td>3</td>
                       <td>5</td>
@@ -1190,10 +1400,15 @@
                       <td>1</td>
                       <td>4</td>
                       <td>-3</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>COL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C4OL</span><img class="img-fluid" src="./../images/COL.png" alt="COL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">COL</td>
                       <td class="leftAlign">Jared Bednar</td>
                       <td>8</td>
                       <td>5</td>
@@ -1208,10 +1423,38 @@
                       <td>1</td>
                       <td>3</td>
                       <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>DAL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C5BJ</span><img class="img-fluid" src="./../images/CBJ.png" alt="CBJ" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CBJ</td>
+                      <td class="leftAlign">John Tortorella</td>
+                      <td>11</td>
+                      <td>4</td>
+                      <td>7</td>
+                      <td>-3</td>
+                      <td>0.364</td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>0</td>
+                      <td>2</td>
+                      <td>9</td>
+                      <td>2</td>
+                      <td>7</td>
+                      <td>-5</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">DAL</span><img class="img-fluid" src="./../images/DAL.png" alt="DAL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">DAL</td>
                       <td class="leftAlign">Lindy Ruff</td>
                       <td>6</td>
                       <td>4</td>
@@ -1226,10 +1469,15 @@
                       <td>2</td>
                       <td>0</td>
                       <td>2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>DET&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">DET</span><img class="img-fluid" src="./../images/DET.png" alt="DET" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">DET</td>
                       <td class="leftAlign">Jeff Blashill</td>
                       <td>16</td>
                       <td>5</td>
@@ -1244,10 +1492,15 @@
                       <td>1</td>
                       <td>5</td>
                       <td>-4</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>EDM&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">EDM</span><img class="img-fluid" src="./../images/EDM.png" alt="EDM" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">EDM</td>
                       <td class="leftAlign">Todd McLellan</td>
                       <td>9</td>
                       <td>2</td>
@@ -1262,10 +1515,15 @@
                       <td>0</td>
                       <td>3</td>
                       <td>-3</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>FLA&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">FLA</span><img class="img-fluid" src="./../images/FLA.png" alt="FLA" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">FLA</td>
                       <td class="leftAlign">Gerard Gallant</td>
                       <td>1</td>
                       <td>0</td>
@@ -1280,10 +1538,15 @@
                       <td>0</td>
                       <td>0</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>FLA&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">FLA</span><img class="img-fluid" src="./../images/FLA.png" alt="FLA" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">FLA</td>
                       <td class="leftAlign">Tom Rowe</td>
                       <td>10</td>
                       <td>3</td>
@@ -1298,10 +1561,15 @@
                       <td>2</td>
                       <td>0</td>
                       <td>2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>LAK&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">LAK</span><img class="img-fluid" src="./../images/LAK.png" alt="LAK" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">LAK</td>
                       <td class="leftAlign">Darryl Sutter</td>
                       <td>8</td>
                       <td>4</td>
@@ -1316,10 +1584,15 @@
                       <td>3</td>
                       <td>1</td>
                       <td>2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>MIN&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">MIN</span><img class="img-fluid" src="./../images/MIN.png" alt="MIN" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">MIN</td>
                       <td class="leftAlign">Bruce Boudreau</td>
                       <td>11</td>
                       <td>5</td>
@@ -1334,10 +1607,15 @@
                       <td>3</td>
                       <td>1</td>
                       <td>2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>MTL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">MTL</span><img class="img-fluid" src="./../images/MTL.png" alt="MTL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">MTL</td>
                       <td class="leftAlign">Michel Therrien</td>
                       <td>3</td>
                       <td>0</td>
@@ -1352,28 +1630,15 @@
                       <td>0</td>
                       <td>1</td>
                       <td>-1</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>NJD&emsp;</td>
-                      <td class="leftAlign">John Hynes</td>
-                      <td>9</td>
-                      <td>2</td>
-                      <td>7</td>
-                      <td>-5</td>
-                      <td>0.222</td>
-                      <td>6</td>
-                      <td>2</td>
-                      <td>4</td>
-                      <td>-2</td>
-                      <td>3</td>
                       <td>0</td>
-                      <td>3</td>
-                      <td>-3</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>NSH&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N1SH</span><img class="img-fluid" src="./../images/NSH.png" alt="NSH" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NSH</td>
                       <td class="leftAlign">Peter Laviolette</td>
                       <td>8</td>
                       <td>4</td>
@@ -1388,28 +1653,38 @@
                       <td>2</td>
                       <td>1</td>
                       <td>1</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>NYI&emsp;</td>
-                      <td class="leftAlign">Jack Capuano</td>
-                      <td>4</td>
-                      <td>3</td>
-                      <td>1</td>
-                      <td>2</td>
-                      <td>0.750</td>
-                      <td>3</td>
-                      <td>2</td>
-                      <td>1</td>
-                      <td>1</td>
-                      <td>1</td>
-                      <td>1</td>
                       <td>0</td>
-                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>NYI&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N2JD</span><img class="img-fluid" src="./../images/NJD.png" alt="NJD" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NJD</td>
+                      <td class="leftAlign">John Hynes</td>
+                      <td>9</td>
+                      <td>2</td>
+                      <td>7</td>
+                      <td>-5</td>
+                      <td>0.222</td>
+                      <td>6</td>
+                      <td>2</td>
+                      <td>4</td>
+                      <td>-2</td>
+                      <td>3</td>
+                      <td>0</td>
+                      <td>3</td>
+                      <td>-3</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N3YI</span><img class="img-fluid" src="./../images/NYI.png" alt="NYI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NYI</td>
                       <td class="leftAlign">Doug Weight</td>
                       <td>5</td>
                       <td>3</td>
@@ -1424,10 +1699,38 @@
                       <td>2</td>
                       <td>0</td>
                       <td>2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>NYR&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N3YI</span><img class="img-fluid" src="./../images/NYI.png" alt="NYI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NYI</td>
+                      <td class="leftAlign">Jack Capuano</td>
+                      <td>4</td>
+                      <td>3</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>0.750</td>
+                      <td>3</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N4YR</span><img class="img-fluid" src="./../images/NYR.png" alt="NYR" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NYR</td>
                       <td class="leftAlign">Alain Vigneault</td>
                       <td>4</td>
                       <td>2</td>
@@ -1442,10 +1745,15 @@
                       <td>1</td>
                       <td>0</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>OTT&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">OTT</span><img class="img-fluid" src="./../images/OTT.png" alt="OTT" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">OTT</td>
                       <td class="leftAlign">Guy Boucher</td>
                       <td>12</td>
                       <td>2</td>
@@ -1460,10 +1768,15 @@
                       <td>2</td>
                       <td>7</td>
                       <td>-5</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>PHI&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">PHI</span><img class="img-fluid" src="./../images/PHI.png" alt="PHI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">PHI</td>
                       <td class="leftAlign">Dave Hakstol</td>
                       <td>12</td>
                       <td>2</td>
@@ -1478,10 +1791,15 @@
                       <td>1</td>
                       <td>4</td>
                       <td>-3</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>PIT&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">PIT</span><img class="img-fluid" src="./../images/PIT.png" alt="PIT" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">PIT</td>
                       <td class="leftAlign">Mike Sullivan</td>
                       <td>13</td>
                       <td>3</td>
@@ -1494,13 +1812,18 @@
                       <td>-2</td>
                       <td>5</td>
                       <td>0</td>
-                      <td></td>
                       <td>5</td>
+                      <td>-5</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>SJS&emsp;</td>
-                      <td class="leftAlign">Pete DeBoer</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">SJS</span><img class="img-fluid" src="./../images/SJS.png" alt="SJS" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">SJS</td>
+                      <td class="leftAlign">Peter DeBoer</td>
                       <td>9</td>
                       <td>1</td>
                       <td>8</td>
@@ -1514,10 +1837,15 @@
                       <td>0</td>
                       <td>2</td>
                       <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>STL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">STL</span><img class="img-fluid" src="./../images/STL.png" alt="STL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">STL</td>
                       <td class="leftAlign">Ken Hitchcock</td>
                       <td>4</td>
                       <td>0</td>
@@ -1532,10 +1860,15 @@
                       <td>0</td>
                       <td>2</td>
                       <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>STL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">STL</span><img class="img-fluid" src="./../images/STL.png" alt="STL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">STL</td>
                       <td class="leftAlign">Mike Yeo</td>
                       <td>1</td>
                       <td>1</td>
@@ -1550,10 +1883,15 @@
                       <td>1</td>
                       <td>0</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>TBL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">TBL</span><img class="img-fluid" src="./../images/TBL.png" alt="TBL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">TBL</td>
                       <td class="leftAlign">Jon Cooper</td>
                       <td>11</td>
                       <td>4</td>
@@ -1568,11 +1906,16 @@
                       <td>4</td>
                       <td>4</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>TOR&emsp;</td>
-                      <td class="leftAlign">Mike Babock</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">TOR</span><img class="img-fluid" src="./../images/TOR.png" alt="TOR" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">TOR</td>
+                      <td class="leftAlign">Mike Babcock</td>
                       <td>8</td>
                       <td>0</td>
                       <td>8</td>
@@ -1586,10 +1929,15 @@
                       <td>0</td>
                       <td>2</td>
                       <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>VAN&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">VAN</span><img class="img-fluid" src="./../images/VAN.png" alt="VAN" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">VAN</td>
                       <td class="leftAlign">Willie Desjardins</td>
                       <td>10</td>
                       <td>4</td>
@@ -1604,28 +1952,15 @@
                       <td>3</td>
                       <td>3</td>
                       <td>0</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>WPG&emsp;</td>
-                      <td class="leftAlign">Paul Maurice</td>
-                      <td>6</td>
-                      <td>2</td>
-                      <td>4</td>
-                      <td>-2</td>
-                      <td>0.333</td>
-                      <td>3</td>
                       <td>0</td>
-                      <td>3</td>
-                      <td>-3</td>
-                      <td>3</td>
-                      <td>2</td>
-                      <td>1</td>
-                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2016-17</td>
-                      <td>WSH&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">W1SH</span><img class="img-fluid" src="./../images/WSH.png" alt="WSH" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">WSH</td>
                       <td class="leftAlign">Barry Trotz</td>
                       <td>10</td>
                       <td>5</td>
@@ -1640,10 +1975,61 @@
                       <td>3</td>
                       <td>2</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>ANA&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">W2PG</span><img class="img-fluid" src="./../images/WPG.png" alt="WPG" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">WPG</td>
+                      <td class="leftAlign">Paul Maurice</td>
+                      <td>6</td>
+                      <td>2</td>
+                      <td>4</td>
+                      <td>-2</td>
+                      <td>0.333</td>
+                      <td>3</td>
+                      <td>0</td>
+                      <td>3</td>
+                      <td>-3</td>
+                      <td>3</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2016-2017</td>
+                      <td class="leftAlign"><span style="font-size: 0;">WWW League</span><img class="img-fluid" src="./../images/NHL.png" alt="NHL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">League</td>
+                      <td class="leftAlign">N/A</td>
+                      <td>11</td>
+                      <td>3</td>
+                      <td>8</td>
+                      <td>-5</td>
+                      <td>0.273</td>
+                      <td>5</td>
+                      <td>1</td>
+                      <td>4</td>
+                      <td>-3</td>
+                      <td>6</td>
+                      <td>2</td>
+                      <td>4</td>
+                      <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">ANA</span><img class="img-fluid" src="./../images/ANA.png" alt="ANA" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">ANA</td>
                       <td class="leftAlign">Randy Carlyle</td>
                       <td>4</td>
                       <td>2</td>
@@ -1658,10 +2044,15 @@
                       <td>2</td>
                       <td>0</td>
                       <td>2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>ARI&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">ARI</span><img class="img-fluid" src="./../images/ARI.png" alt="ARI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">ARI</td>
                       <td class="leftAlign">Rick Tocchett</td>
                       <td>12</td>
                       <td>6</td>
@@ -1676,10 +2067,15 @@
                       <td>2</td>
                       <td>0</td>
                       <td>2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>BOS&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">BOS</span><img class="img-fluid" src="./../images/BOS.png" alt="BOS" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">BOS</td>
                       <td class="leftAlign">Bruce Cassidy</td>
                       <td>10</td>
                       <td>4</td>
@@ -1694,10 +2090,15 @@
                       <td>1</td>
                       <td>1</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>BUF&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">BUF</span><img class="img-fluid" src="./../images/BUF.png" alt="BUF" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">BUF</td>
                       <td class="leftAlign">Phil Housley</td>
                       <td>4</td>
                       <td>1</td>
@@ -1712,46 +2113,15 @@
                       <td>1</td>
                       <td>1</td>
                       <td>0</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>CAR&emsp;</td>
-                      <td class="leftAlign">Bill Peters</td>
-                      <td>6</td>
-                      <td>1</td>
-                      <td>5</td>
-                      <td>-4</td>
-                      <td>0.167</td>
-                      <td>3</td>
-                      <td>0</td>
-                      <td>3</td>
-                      <td>-3</td>
-                      <td>3</td>
-                      <td>1</td>
-                      <td>2</td>
-                      <td>-1</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>CBJ&emsp;</td>
-                      <td class="leftAlign">John Tortorella</td>
-                      <td>6</td>
-                      <td>1</td>
-                      <td>5</td>
-                      <td>-4</td>
-                      <td>0.167</td>
-                      <td>6</td>
-                      <td>1</td>
-                      <td>5</td>
-                      <td>-4</td>
                       <td>0</td>
                       <td>0</td>
                       <td>0</td>
                       <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>CGY&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C1GY</span><img class="img-fluid" src="./../images/CGY.png" alt="CGY" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CGY</td>
                       <td class="leftAlign">Glen Gulutzan</td>
                       <td>6</td>
                       <td>3</td>
@@ -1766,11 +2136,39 @@
                       <td>1</td>
                       <td>1</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>CHI&emsp;</td>
-                      <td class="leftAlign">Joel Qunneville</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C2AR</span><img class="img-fluid" src="./../images/CAR.png" alt="CAR" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CAR</td>
+                      <td class="leftAlign">Bill Peters</td>
+                      <td>6</td>
+                      <td>1</td>
+                      <td>5</td>
+                      <td>-4</td>
+                      <td>0.167</td>
+                      <td>3</td>
+                      <td>0</td>
+                      <td>3</td>
+                      <td>-3</td>
+                      <td>3</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C3HI</span><img class="img-fluid" src="./../images/CHI.png" alt="CHI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CHI</td>
+                      <td class="leftAlign">Joel Quenneville</td>
                       <td>5</td>
                       <td>1</td>
                       <td>4</td>
@@ -1784,10 +2182,15 @@
                       <td>0</td>
                       <td>1</td>
                       <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>COL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C4OL</span><img class="img-fluid" src="./../images/COL.png" alt="COL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">COL</td>
                       <td class="leftAlign">Jared Bednar</td>
                       <td>7</td>
                       <td>4</td>
@@ -1802,28 +2205,61 @@
                       <td>0</td>
                       <td>2</td>
                       <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>DAL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C5BJ</span><img class="img-fluid" src="./../images/CBJ.png" alt="CBJ" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CBJ</td>
+                      <td class="leftAlign">John Tortorella</td>
+                      <td>6</td>
+                      <td>1</td>
+                      <td>5</td>
+                      <td>-4</td>
+                      <td>0.167</td>
+                      <td>6</td>
+                      <td>1</td>
+                      <td>5</td>
+                      <td>-4</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">DAL</span><img class="img-fluid" src="./../images/DAL.png" alt="DAL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">DAL</td>
                       <td class="leftAlign">Ken Hitchcock</td>
-                      <td>4</td>
+                      <td>5</td>
                       <td>2</td>
-                      <td>2</td>
-                      <td>0</td>
-                      <td>0.500</td>
                       <td>3</td>
-                      <td>1</td>
-                      <td>2</td>
                       <td>-1</td>
+                      <td>0.400</td>
+                      <td>4</td>
+                      <td>1</td>
+                      <td>3</td>
+                      <td>-2</td>
                       <td>1</td>
                       <td>1</td>
                       <td>0</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>DET&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">DET</span><img class="img-fluid" src="./../images/DET.png" alt="DET" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">DET</td>
                       <td class="leftAlign">Jeff Blashill</td>
                       <td>16</td>
                       <td>5</td>
@@ -1838,10 +2274,15 @@
                       <td>0</td>
                       <td>1</td>
                       <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>EDM&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">EDM</span><img class="img-fluid" src="./../images/EDM.png" alt="EDM" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">EDM</td>
                       <td class="leftAlign">Todd McLellan</td>
                       <td>3</td>
                       <td>1</td>
@@ -1856,10 +2297,15 @@
                       <td>0</td>
                       <td>0</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>FLA&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">FLA</span><img class="img-fluid" src="./../images/FLA.png" alt="FLA" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">FLA</td>
                       <td class="leftAlign">Bob Boughner</td>
                       <td>13</td>
                       <td>8</td>
@@ -1874,10 +2320,15 @@
                       <td>4</td>
                       <td>0</td>
                       <td>4</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>LAK&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">LAK</span><img class="img-fluid" src="./../images/LAK.png" alt="LAK" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">LAK</td>
                       <td class="leftAlign">John Stevens</td>
                       <td>9</td>
                       <td>3</td>
@@ -1892,10 +2343,15 @@
                       <td>1</td>
                       <td>1</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>MIN&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">MIN</span><img class="img-fluid" src="./../images/MIN.png" alt="MIN" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">MIN</td>
                       <td class="leftAlign">Bruce Boudreau</td>
                       <td>12</td>
                       <td>3</td>
@@ -1910,10 +2366,15 @@
                       <td>0</td>
                       <td>3</td>
                       <td>-3</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>MTL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">MTL</span><img class="img-fluid" src="./../images/MTL.png" alt="MTL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">MTL</td>
                       <td class="leftAlign">Claude Julien</td>
                       <td>5</td>
                       <td>2</td>
@@ -1928,28 +2389,15 @@
                       <td>1</td>
                       <td>0</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>NJD&emsp;</td>
-                      <td class="leftAlign">John Hynes</td>
-                      <td>4</td>
-                      <td>0</td>
-                      <td>4</td>
-                      <td>-4</td>
-                      <td>0.000</td>
-                      <td>3</td>
-                      <td>0</td>
-                      <td>3</td>
-                      <td>-3</td>
-                      <td>1</td>
-                      <td>0</td>
-                      <td>1</td>
-                      <td>-1</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>NSH&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N1SH</span><img class="img-fluid" src="./../images/NSH.png" alt="NSH" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NSH</td>
                       <td class="leftAlign">Peter Laviolette</td>
                       <td>5</td>
                       <td>3</td>
@@ -1964,11 +2412,39 @@
                       <td>3</td>
                       <td>0</td>
                       <td>3</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>NYI&emsp;</td>
-                      <td class="leftAlign">Jack Capuano</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N2JD</span><img class="img-fluid" src="./../images/NJD.png" alt="NJD" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NJD</td>
+                      <td class="leftAlign">John Hynes</td>
+                      <td>4</td>
+                      <td>0</td>
+                      <td>4</td>
+                      <td>-4</td>
+                      <td>0.000</td>
+                      <td>3</td>
+                      <td>0</td>
+                      <td>3</td>
+                      <td>-3</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N3YI</span><img class="img-fluid" src="./../images/NYI.png" alt="NYI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NYI</td>
+                      <td class="leftAlign">Doug Weight</td>
                       <td>9</td>
                       <td>4</td>
                       <td>5</td>
@@ -1982,10 +2458,15 @@
                       <td>3</td>
                       <td>1</td>
                       <td>2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>NYR&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N4YR</span><img class="img-fluid" src="./../images/NYR.png" alt="NYR" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NYR</td>
                       <td class="leftAlign">Alain Vigneault</td>
                       <td>8</td>
                       <td>6</td>
@@ -2000,10 +2481,15 @@
                       <td>3</td>
                       <td>1</td>
                       <td>2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>OTT&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">OTT</span><img class="img-fluid" src="./../images/OTT.png" alt="OTT" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">OTT</td>
                       <td class="leftAlign">Guy Boucher</td>
                       <td>9</td>
                       <td>2</td>
@@ -2018,10 +2504,15 @@
                       <td>0</td>
                       <td>1</td>
                       <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>PHI&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">PHI</span><img class="img-fluid" src="./../images/PHI.png" alt="PHI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">PHI</td>
                       <td class="leftAlign">Dave Hakstol</td>
                       <td>8</td>
                       <td>3</td>
@@ -2036,10 +2527,15 @@
                       <td>2</td>
                       <td>1</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>PIT&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">PIT</span><img class="img-fluid" src="./../images/PIT.png" alt="PIT" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">PIT</td>
                       <td class="leftAlign">Mike Sullivan</td>
                       <td>5</td>
                       <td>3</td>
@@ -2054,11 +2550,16 @@
                       <td>1</td>
                       <td>0</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>SJS&emsp;</td>
-                      <td class="leftAlign">Pete DeBoer</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">SJS</span><img class="img-fluid" src="./../images/SJS.png" alt="SJS" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">SJS</td>
+                      <td class="leftAlign">Peter DeBoer</td>
                       <td>10</td>
                       <td>2</td>
                       <td>8</td>
@@ -2072,10 +2573,15 @@
                       <td>1</td>
                       <td>1</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>STL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">STL</span><img class="img-fluid" src="./../images/STL.png" alt="STL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">STL</td>
                       <td class="leftAlign">Mike Yeo</td>
                       <td>8</td>
                       <td>2</td>
@@ -2090,10 +2596,15 @@
                       <td>1</td>
                       <td>1</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>TBL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">TBL</span><img class="img-fluid" src="./../images/TBL.png" alt="TBL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">TBL</td>
                       <td class="leftAlign">Jon Cooper</td>
                       <td>7</td>
                       <td>2</td>
@@ -2108,11 +2619,16 @@
                       <td>0</td>
                       <td>0</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>TOR&emsp;</td>
-                      <td class="leftAlign">Mike Babock</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">TOR</span><img class="img-fluid" src="./../images/TOR.png" alt="TOR" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">TOR</td>
+                      <td class="leftAlign">Mike Babcock</td>
                       <td>7</td>
                       <td>1</td>
                       <td>6</td>
@@ -2126,10 +2642,15 @@
                       <td>1</td>
                       <td>0</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>VAN&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">VAN</span><img class="img-fluid" src="./../images/VAN.png" alt="VAN" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">VAN</td>
                       <td class="leftAlign">Travis Green</td>
                       <td>7</td>
                       <td>4</td>
@@ -2144,10 +2665,15 @@
                       <td>2</td>
                       <td>0</td>
                       <td>2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>VGK&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">VGK</span><img class="img-fluid" src="./../images/VGK.png" alt="VGK" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">VGK</td>
                       <td class="leftAlign">Gerard Gallant</td>
                       <td>13</td>
                       <td>5</td>
@@ -2162,28 +2688,15 @@
                       <td>4</td>
                       <td>0</td>
                       <td>4</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>WPG&emsp;</td>
-                      <td class="leftAlign">Paul Maurice</td>
-                      <td>9</td>
-                      <td>3</td>
-                      <td>6</td>
-                      <td>-3</td>
-                      <td>0.333</td>
-                      <td>5</td>
-                      <td>2</td>
-                      <td>3</td>
-                      <td>-1</td>
-                      <td>4</td>
-                      <td>1</td>
-                      <td>3</td>
-                      <td>-2</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2017-18</td>
-                      <td>WSH&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">W1SH</span><img class="img-fluid" src="./../images/WSH.png" alt="WSH" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">WSH</td>
                       <td class="leftAlign">Barry Trotz</td>
                       <td>6</td>
                       <td>4</td>
@@ -2198,10 +2711,61 @@
                       <td>1</td>
                       <td>0</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>ANA&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">W2PG</span><img class="img-fluid" src="./../images/WPG.png" alt="WPG" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">WPG</td>
+                      <td class="leftAlign">Paul Maurice</td>
+                      <td>9</td>
+                      <td>3</td>
+                      <td>6</td>
+                      <td>-3</td>
+                      <td>0.333</td>
+                      <td>5</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>-1</td>
+                      <td>4</td>
+                      <td>1</td>
+                      <td>3</td>
+                      <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2017-2018</td>
+                      <td class="leftAlign"><span style="font-size: 0;">WWW League</span><img class="img-fluid" src="./../images/NHL.png" alt="NHL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">League</td>
+                      <td class="leftAlign">N/A</td>
+                      <td>21</td>
+                      <td>5</td>
+                      <td>16</td>
+                      <td>-11</td>
+                      <td>0.238</td>
+                      <td>11</td>
+                      <td>3</td>
+                      <td>8</td>
+                      <td>-5</td>
+                      <td>10</td>
+                      <td>2</td>
+                      <td>8</td>
+                      <td>-6</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">ANA</span><img class="img-fluid" src="./../images/ANA.png" alt="ANA" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">ANA</td>
                       <td class="leftAlign">Randy Carlyle</td>
                       <td>6</td>
                       <td>2</td>
@@ -2216,10 +2780,15 @@
                       <td>1</td>
                       <td>1</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>ANA&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">ANA</span><img class="img-fluid" src="./../images/ANA.png" alt="ANA" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">ANA</td>
                       <td class="leftAlign">Bob Murray</td>
                       <td>1</td>
                       <td>1</td>
@@ -2234,28 +2803,38 @@
                       <td>1</td>
                       <td>0</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>ARI&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">ARI</span><img class="img-fluid" src="./../images/ARI.png" alt="ARI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">ARI</td>
                       <td class="leftAlign">Rick Tocchett</td>
-                      <td>9</td>
-                      <td>4</td>
+                      <td>10</td>
                       <td>5</td>
-                      <td>-1</td>
-                      <td>0.444</td>
                       <td>5</td>
-                      <td>2</td>
+                      <td>0</td>
+                      <td>0.500</td>
+                      <td>6</td>
                       <td>3</td>
-                      <td>-1</td>
+                      <td>3</td>
+                      <td>0</td>
                       <td>4</td>
                       <td>2</td>
                       <td>2</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>BOS&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">BOS</span><img class="img-fluid" src="./../images/BOS.png" alt="BOS" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">BOS</td>
                       <td class="leftAlign">Bruce Cassidy</td>
                       <td>6</td>
                       <td>2</td>
@@ -2268,48 +2847,132 @@
                       <td>-3</td>
                       <td>1</td>
                       <td>1</td>
+                      <td>0</td>
                       <td>1</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>BUF&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">BUF</span><img class="img-fluid" src="./../images/BUF.png" alt="BUF" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">BUF</td>
                       <td class="leftAlign">Phil Housley</td>
-                      <td>3</td>
+                      <td>4</td>
                       <td>1</td>
+                      <td>3</td>
+                      <td>-2</td>
+                      <td>0.250</td>
+                      <td>3</td>
+                      <td>0</td>
+                      <td>3</td>
+                      <td>-3</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C1GY</span><img class="img-fluid" src="./../images/CGY.png" alt="CGY" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CGY</td>
+                      <td class="leftAlign">Bill Peters</td>
+                      <td>6</td>
                       <td>2</td>
-                      <td>-1</td>
+                      <td>4</td>
+                      <td>-2</td>
                       <td>0.333</td>
+                      <td>4</td>
+                      <td>1</td>
+                      <td>3</td>
+                      <td>-2</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C2AR</span><img class="img-fluid" src="./../images/CAR.png" alt="CAR" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CAR</td>
+                      <td class="leftAlign">Rod Brind&#39;Amour</td>
+                      <td>9</td>
+                      <td>3</td>
+                      <td>6</td>
+                      <td>-3</td>
+                      <td>0.333</td>
+                      <td>6</td>
+                      <td>0</td>
+                      <td>6</td>
+                      <td>-6</td>
+                      <td>3</td>
+                      <td>3</td>
+                      <td>0</td>
+                      <td>3</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C3HI</span><img class="img-fluid" src="./../images/CHI.png" alt="CHI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CHI</td>
+                      <td class="leftAlign">Jeremy Colliton</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
+                      <td>0.000</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C4OL</span><img class="img-fluid" src="./../images/COL.png" alt="COL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">COL</td>
+                      <td class="leftAlign">Jared Bednar</td>
+                      <td>9</td>
+                      <td>5</td>
+                      <td>4</td>
+                      <td>1</td>
+                      <td>0.556</td>
+                      <td>5</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>-1</td>
+                      <td>4</td>
+                      <td>3</td>
+                      <td>1</td>
                       <td>2</td>
                       <td>0</td>
-                      <td>2</td>
-                      <td>-2</td>
-                      <td>1</td>
-                      <td>1</td>
                       <td>0</td>
-                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>CAR&emsp;</td>
-                      <td class="leftAlign">Rod Brind’Amour</td>
-                      <td>8</td>
-                      <td>3</td>
-                      <td>5</td>
-                      <td>-2</td>
-                      <td>0.375</td>
-                      <td>5</td>
-                      <td>0</td>
-                      <td>5</td>
-                      <td>-5</td>
-                      <td>3</td>
-                      <td>3</td>
-                      <td>0</td>
-                      <td>3</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>CBJ&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C5BJ</span><img class="img-fluid" src="./../images/CBJ.png" alt="CBJ" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CBJ</td>
                       <td class="leftAlign">John Tortorella</td>
                       <td>7</td>
                       <td>4</td>
@@ -2324,64 +2987,15 @@
                       <td>4</td>
                       <td>1</td>
                       <td>3</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>CGY&emsp;</td>
-                      <td class="leftAlign">Bill Peters</td>
-                      <td>6</td>
-                      <td>2</td>
-                      <td>4</td>
-                      <td>2</td>
-                      <td>0.667</td>
-                      <td>4</td>
-                      <td>1</td>
-                      <td>3</td>
-                      <td>-2</td>
-                      <td>2</td>
-                      <td>1</td>
-                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                       <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>CHI&emsp;</td>
-                      <td class="leftAlign">Jeremy Colliton</td>
-                      <td>4</td>
-                      <td>3</td>
-                      <td>1</td>
-                      <td>2</td>
-                      <td>0.750</td>
-                      <td>1</td>
-                      <td>0</td>
-                      <td>1</td>
-                      <td>-1</td>
-                      <td>3</td>
-                      <td>3</td>
-                      <td>0</td>
-                      <td>3</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>COL&emsp;</td>
-                      <td class="leftAlign">Jared Bednar</td>
-                      <td>9</td>
-                      <td>4</td>
-                      <td>5</td>
-                      <td>-1</td>
-                      <td>0.444</td>
-                      <td>5</td>
-                      <td>1</td>
-                      <td>4</td>
-                      <td>-3</td>
-                      <td>4</td>
-                      <td>3</td>
-                      <td>1</td>
-                      <td>2</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>DAL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">DAL</span><img class="img-fluid" src="./../images/DAL.png" alt="DAL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">DAL</td>
                       <td class="leftAlign">Jim Montgomery</td>
                       <td>6</td>
                       <td>5</td>
@@ -2396,15 +3010,20 @@
                       <td>1</td>
                       <td>0</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>DET&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">DET</span><img class="img-fluid" src="./../images/DET.png" alt="DET" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">DET</td>
                       <td class="leftAlign">Jeff Blashill</td>
                       <td>16</td>
                       <td>3</td>
                       <td>13</td>
-                      <td>-0</td>
+                      <td>-10</td>
                       <td>0.188</td>
                       <td>12</td>
                       <td>1</td>
@@ -2414,46 +3033,61 @@
                       <td>2</td>
                       <td>2</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>EDM&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">EDM</span><img class="img-fluid" src="./../images/EDM.png" alt="EDM" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">EDM</td>
                       <td class="leftAlign">Ken Hitchcock</td>
-                      <td>10</td>
+                      <td>11</td>
                       <td>4</td>
-                      <td>6</td>
-                      <td>-2</td>
-                      <td>0.400</td>
-                      <td>6</td>
+                      <td>7</td>
+                      <td>-3</td>
+                      <td>0.364</td>
+                      <td>7</td>
                       <td>1</td>
-                      <td>5</td>
-                      <td>-4</td>
-                      <td>4</td>
-                      <td>3</td>
-                      <td>1</td>
-                      <td>2</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>FLA&emsp;</td>
-                      <td class="leftAlign">Bob Boughner</td>
-                      <td>13</td>
-                      <td>4</td>
-                      <td>9</td>
+                      <td>6</td>
                       <td>-5</td>
-                      <td>0.308</td>
-                      <td>10</td>
+                      <td>4</td>
+                      <td>3</td>
+                      <td>1</td>
                       <td>2</td>
-                      <td>8</td>
-                      <td>-6</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">FLA</span><img class="img-fluid" src="./../images/FLA.png" alt="FLA" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">FLA</td>
+                      <td class="leftAlign">Bob Boughner</td>
+                      <td>15</td>
+                      <td>4</td>
+                      <td>11</td>
+                      <td>-7</td>
+                      <td>0.267</td>
+                      <td>12</td>
+                      <td>2</td>
+                      <td>10</td>
+                      <td>-8</td>
                       <td>3</td>
                       <td>2</td>
                       <td>1</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>LAK&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">LAK</span><img class="img-fluid" src="./../images/LAK.png" alt="LAK" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">LAK</td>
                       <td class="leftAlign">John Stevens</td>
                       <td>4</td>
                       <td>1</td>
@@ -2468,46 +3102,61 @@
                       <td>0</td>
                       <td>0</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>LAK&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">LAK</span><img class="img-fluid" src="./../images/LAK.png" alt="LAK" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">LAK</td>
                       <td class="leftAlign">Willie Desjardins</td>
+                      <td>7</td>
+                      <td>1</td>
+                      <td>6</td>
+                      <td>-5</td>
+                      <td>0.143</td>
                       <td>6</td>
                       <td>1</td>
                       <td>5</td>
                       <td>-4</td>
-                      <td>0.167</td>
-                      <td>5</td>
-                      <td>1</td>
-                      <td>4</td>
-                      <td>-3</td>
                       <td>1</td>
                       <td>0</td>
                       <td>1</td>
                       <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>MIN&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">MIN</span><img class="img-fluid" src="./../images/MIN.png" alt="MIN" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">MIN</td>
                       <td class="leftAlign">Bruce Boudreau</td>
-                      <td>10</td>
-                      <td>3</td>
+                      <td>11</td>
+                      <td>5</td>
                       <td>6</td>
-                      <td>-4</td>
-                      <td>0.300</td>
-                      <td>5</td>
-                      <td>2</td>
-                      <td>3</td>
                       <td>-1</td>
+                      <td>0.455</td>
                       <td>5</td>
+                      <td>3</td>
+                      <td>2</td>
                       <td>1</td>
+                      <td>6</td>
+                      <td>2</td>
                       <td>4</td>
-                      <td>-3</td>
+                      <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>MTL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">MTL</span><img class="img-fluid" src="./../images/MTL.png" alt="MTL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">MTL</td>
                       <td class="leftAlign">Claude Julien</td>
                       <td>10</td>
                       <td>4</td>
@@ -2522,28 +3171,15 @@
                       <td>3</td>
                       <td>0</td>
                       <td>3</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>NJD&emsp;</td>
-                      <td class="leftAlign">John Hynes</td>
-                      <td>7</td>
-                      <td>2</td>
-                      <td>5</td>
-                      <td>-3</td>
-                      <td>0.286</td>
-                      <td>5</td>
-                      <td>1</td>
-                      <td>4</td>
-                      <td>-3</td>
-                      <td>2</td>
-                      <td>1</td>
-                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                       <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>NSH&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N1SH</span><img class="img-fluid" src="./../images/NSH.png" alt="NSH" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NSH</td>
                       <td class="leftAlign">Peter Laviolette</td>
                       <td>8</td>
                       <td>7</td>
@@ -2558,64 +3194,130 @@
                       <td>5</td>
                       <td>0</td>
                       <td>5</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>NYI&emsp;</td>
-                      <td class="leftAlign">Barry Trotz</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N2JD</span><img class="img-fluid" src="./../images/NJD.png" alt="NJD" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NJD</td>
+                      <td class="leftAlign">John Hynes</td>
+                      <td>8</td>
+                      <td>3</td>
+                      <td>5</td>
+                      <td>-2</td>
+                      <td>0.375</td>
+                      <td>6</td>
+                      <td>2</td>
                       <td>4</td>
-                      <td>3</td>
-                      <td>1</td>
+                      <td>-2</td>
                       <td>2</td>
-                      <td>0.750</td>
+                      <td>1</td>
                       <td>1</td>
                       <td>0</td>
-                      <td>1</td>
-                      <td>-1</td>
-                      <td>3</td>
-                      <td>3</td>
                       <td>0</td>
-                      <td>3</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>NYR&emsp;</td>
-                      <td class="leftAlign">David Quinn</td>
-                      <td>3</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N3YI</span><img class="img-fluid" src="./../images/NYI.png" alt="NYI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NYI</td>
+                      <td class="leftAlign">Barry Trotz</td>
+                      <td>5</td>
+                      <td>4</td>
                       <td>1</td>
+                      <td>3</td>
+                      <td>0.800</td>
                       <td>2</td>
-                      <td>-1</td>
-                      <td>0.333</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>3</td>
+                      <td>3</td>
+                      <td>0</td>
+                      <td>3</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N4YR</span><img class="img-fluid" src="./../images/NYR.png" alt="NYR" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NYR</td>
+                      <td class="leftAlign">David Quinn</td>
+                      <td>4</td>
+                      <td>1</td>
+                      <td>3</td>
+                      <td>-2</td>
+                      <td>0.250</td>
                       <td>2</td>
                       <td>0</td>
                       <td>2</td>
+                      <td>-2</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">OTT</span><img class="img-fluid" src="./../images/OTT.png" alt="OTT" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">OTT</td>
+                      <td class="leftAlign">Marc Crawford</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1.000</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">OTT</span><img class="img-fluid" src="./../images/OTT.png" alt="OTT" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">OTT</td>
+                      <td class="leftAlign">Guy Boucher</td>
+                      <td>5</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>-1</td>
+                      <td>0.400</td>
+                      <td>4</td>
+                      <td>1</td>
+                      <td>3</td>
                       <td>-2</td>
                       <td>1</td>
                       <td>1</td>
                       <td>0</td>
                       <td>1</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>OTT&emsp;</td>
-                      <td class="leftAlign">Guy Boucher</td>
-                      <td>6</td>
-                      <td>3</td>
-                      <td>3</td>
                       <td>0</td>
-                      <td>0.500</td>
-                      <td>5</td>
-                      <td>2</td>
-                      <td>3</td>
-                      <td>-1</td>
-                      <td>1</td>
-                      <td>1</td>
                       <td>0</td>
-                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>PHI&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">PHI</span><img class="img-fluid" src="./../images/PHI.png" alt="PHI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">PHI</td>
                       <td class="leftAlign">Dave Hakstol</td>
                       <td>3</td>
                       <td>0</td>
@@ -2630,64 +3332,84 @@
                       <td>0</td>
                       <td>0</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>PHI&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">PHI</span><img class="img-fluid" src="./../images/PHI.png" alt="PHI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">PHI</td>
                       <td class="leftAlign">Scott Gordon</td>
-                      <td>4</td>
-                      <td>1</td>
-                      <td>3</td>
-                      <td>-2</td>
-                      <td>0.250</td>
-                      <td>2</td>
-                      <td>0</td>
-                      <td>2</td>
-                      <td>-2</td>
-                      <td>2</td>
-                      <td>1</td>
-                      <td>1</td>
-                      <td>0</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>PIT&emsp;</td>
-                      <td class="leftAlign">Mike Sullivan</td>
-                      <td>13</td>
-                      <td>7</td>
-                      <td>6</td>
-                      <td>1</td>
-                      <td>0.538</td>
-                      <td>8</td>
-                      <td>4</td>
-                      <td>4</td>
-                      <td>0</td>
                       <td>5</td>
+                      <td>2</td>
                       <td>3</td>
+                      <td>-1</td>
+                      <td>0.400</td>
+                      <td>3</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>-1</td>
                       <td>2</td>
                       <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>SJS&emsp;</td>
-                      <td class="leftAlign">Pete DeBoer</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">PIT</span><img class="img-fluid" src="./../images/PIT.png" alt="PIT" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">PIT</td>
+                      <td class="leftAlign">Mike Sullivan</td>
+                      <td>15</td>
                       <td>8</td>
+                      <td>7</td>
+                      <td>1</td>
+                      <td>0.533</td>
+                      <td>9</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>-1</td>
+                      <td>6</td>
+                      <td>4</td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">SJS</span><img class="img-fluid" src="./../images/SJS.png" alt="SJS" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">SJS</td>
+                      <td class="leftAlign">Peter DeBoer</td>
+                      <td>10</td>
                       <td>4</td>
                       <td>6</td>
                       <td>-2</td>
-                      <td>0.500</td>
-                      <td>4</td>
+                      <td>0.400</td>
+                      <td>6</td>
                       <td>3</td>
-                      <td>1</td>
-                      <td>2</td>
+                      <td>3</td>
+                      <td>0</td>
                       <td>4</td>
                       <td>1</td>
                       <td>3</td>
                       <td>-2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>STL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">STL</span><img class="img-fluid" src="./../images/STL.png" alt="STL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">STL</td>
                       <td class="leftAlign">Mike Yeo</td>
                       <td>1</td>
                       <td>0</td>
@@ -2702,64 +3424,84 @@
                       <td>0</td>
                       <td>1</td>
                       <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>STL&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">STL</span><img class="img-fluid" src="./../images/STL.png" alt="STL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">STL</td>
                       <td class="leftAlign">Craig Berube</td>
-                      <td>6</td>
-                      <td>1</td>
+                      <td>8</td>
+                      <td>3</td>
                       <td>5</td>
-                      <td>-4</td>
-                      <td>0.167</td>
+                      <td>-2</td>
+                      <td>0.375</td>
+                      <td>6</td>
+                      <td>2</td>
+                      <td>4</td>
+                      <td>-2</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">TBL</span><img class="img-fluid" src="./../images/TBL.png" alt="TBL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">TBL</td>
+                      <td class="leftAlign">Jon Cooper</td>
+                      <td>8</td>
+                      <td>3</td>
+                      <td>5</td>
+                      <td>-2</td>
+                      <td>0.375</td>
                       <td>5</td>
                       <td>1</td>
                       <td>4</td>
                       <td>-3</td>
-                      <td>1</td>
-                      <td>0</td>
-                      <td>1</td>
-                      <td>-1</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>TBL&emsp;</td>
-                      <td class="leftAlign">Jon Cooper</td>
-                      <td>7</td>
-                      <td>3</td>
-                      <td>4</td>
-                      <td>-1</td>
-                      <td>0.429</td>
-                      <td>4</td>
-                      <td>1</td>
-                      <td>3</td>
-                      <td>-2</td>
                       <td>3</td>
                       <td>2</td>
                       <td>1</td>
                       <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>TOR&emsp;</td>
-                      <td class="leftAlign">Mike Babock</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">TOR</span><img class="img-fluid" src="./../images/TOR.png" alt="TOR" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">TOR</td>
+                      <td class="leftAlign">Mike Babcock</td>
+                      <td>6</td>
+                      <td>0</td>
+                      <td>6</td>
+                      <td>-6</td>
+                      <td>0.000</td>
                       <td>5</td>
                       <td>0</td>
                       <td>5</td>
                       <td>-5</td>
-                      <td>0.000</td>
-                      <td>4</td>
-                      <td>0</td>
-                      <td>4</td>
-                      <td>-4</td>
                       <td>1</td>
                       <td>0</td>
                       <td>1</td>
                       <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>VAN&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">VAN</span><img class="img-fluid" src="./../images/VAN.png" alt="VAN" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">VAN</td>
                       <td class="leftAlign">Travis Green</td>
                       <td>7</td>
                       <td>3</td>
@@ -2774,46 +3516,38 @@
                       <td>2</td>
                       <td>0</td>
                       <td>2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>VGK&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">VGK</span><img class="img-fluid" src="./../images/VGK.png" alt="VGK" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">VGK</td>
                       <td class="leftAlign">Gerard Gallant</td>
-                      <td>16</td>
+                      <td>17</td>
                       <td>6</td>
-                      <td>10</td>
-                      <td>-4</td>
-                      <td>0.375</td>
                       <td>11</td>
+                      <td>-5</td>
+                      <td>0.353</td>
+                      <td>12</td>
                       <td>2</td>
-                      <td>9</td>
-                      <td>-7</td>
+                      <td>10</td>
+                      <td>-8</td>
                       <td>5</td>
                       <td>4</td>
                       <td>1</td>
                       <td>3</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
                     </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>WPG&emsp;</td>
-                      <td class="leftAlign">Paul Maurice</td>
-                      <td>6</td>
-                      <td>4</td>
-                      <td>2</td>
-                      <td>2</td>
-                      <td>0.667</td>
-                      <td>4</td>
-                      <td>3</td>
-                      <td>1</td>
-                      <td>2</td>
-                      <td>2</td>
-                      <td>1</td>
-                      <td>1</td>
-                      <td>1</td>
-                    </tr>
-                    <tr>
-                      <td class="leftAlign">2018-19</td>
-                      <td>WSH&emsp;</td>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">W1SH</span><img class="img-fluid" src="./../images/WSH.png" alt="WSH" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">WSH</td>
                       <td class="leftAlign">Todd Reirden</td>
                       <td>5</td>
                       <td>1</td>
@@ -2828,6 +3562,769 @@
                       <td>1</td>
                       <td>1</td>
                       <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">W2PG</span><img class="img-fluid" src="./../images/WPG.png" alt="WPG" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">WPG</td>
+                      <td class="leftAlign">Paul Maurice</td>
+                      <td>7</td>
+                      <td>4</td>
+                      <td>3</td>
+                      <td>1</td>
+                      <td>0.571</td>
+                      <td>5</td>
+                      <td>3</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2018-2019</td>
+                      <td class="leftAlign"><span style="font-size: 0;">WWW League</span><img class="img-fluid" src="./../images/NHL.png" alt="NHL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">League</td>
+                      <td class="leftAlign">N/A</td>
+                      <td>9</td>
+                      <td>1</td>
+                      <td>8</td>
+                      <td>-7</td>
+                      <td>0.111</td>
+                      <td>4</td>
+                      <td>0</td>
+                      <td>4</td>
+                      <td>-4</td>
+                      <td>5</td>
+                      <td>1</td>
+                      <td>4</td>
+                      <td>-3</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">ANA</span><img class="img-fluid" src="./../images/ANA.png" alt="ANA" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">ANA</td>
+                      <td class="leftAlign">Dallas Eakins</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0.500</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">ARI</span><img class="img-fluid" src="./../images/ARI.png" alt="ARI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">ARI</td>
+                      <td class="leftAlign">Rick Tocchett</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
+                      <td>0.000</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">BOS</span><img class="img-fluid" src="./../images/BOS.png" alt="BOS" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">BOS</td>
+                      <td class="leftAlign">Bruce Cassidy</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">BUF</span><img class="img-fluid" src="./../images/BUF.png" alt="BUF" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">BUF</td>
+                      <td class="leftAlign">Ralph Krueger</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1.000</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C1GY</span><img class="img-fluid" src="./../images/CGY.png" alt="CGY" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CGY</td>
+                      <td class="leftAlign">Bill Peters</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C2AR</span><img class="img-fluid" src="./../images/CAR.png" alt="CAR" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CAR</td>
+                      <td class="leftAlign">Rod Brind&#39;Amour</td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>0</td>
+                      <td>2</td>
+                      <td>1.000</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C3HI</span><img class="img-fluid" src="./../images/CHI.png" alt="CHI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CHI</td>
+                      <td class="leftAlign">Jeremy Colliton</td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>0</td>
+                      <td>2</td>
+                      <td>1.000</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>0</td>
+                      <td>2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C4OL</span><img class="img-fluid" src="./../images/COL.png" alt="COL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">COL</td>
+                      <td class="leftAlign">Jared Bednar</td>
+                      <td>3</td>
+                      <td>3</td>
+                      <td>0</td>
+                      <td>3</td>
+                      <td>1.000</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>0</td>
+                      <td>2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">C5BJ</span><img class="img-fluid" src="./../images/CBJ.png" alt="CBJ" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">CBJ</td>
+                      <td class="leftAlign">John Tortorella</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">DAL</span><img class="img-fluid" src="./../images/DAL.png" alt="DAL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">DAL</td>
+                      <td class="leftAlign">Jim Montgomery</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
+                      <td>0.000</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">DET</span><img class="img-fluid" src="./../images/DET.png" alt="DET" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">DET</td>
+                      <td class="leftAlign">Jeff Blashill</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1.000</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">EDM</span><img class="img-fluid" src="./../images/EDM.png" alt="EDM" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">EDM</td>
+                      <td class="leftAlign">Dave Tippett</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1.000</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">FLA</span><img class="img-fluid" src="./../images/FLA.png" alt="FLA" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">FLA</td>
+                      <td class="leftAlign">Joel Quenneville</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">LAK</span><img class="img-fluid" src="./../images/LAK.png" alt="LAK" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">LAK</td>
+                      <td class="leftAlign">Todd McLellan</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">MIN</span><img class="img-fluid" src="./../images/MIN.png" alt="MIN" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">MIN</td>
+                      <td class="leftAlign">Bruce Boudreau</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0.500</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">MTL</span><img class="img-fluid" src="./../images/MTL.png" alt="MTL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">MTL</td>
+                      <td class="leftAlign">Claude Julien</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1.000</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N1SH</span><img class="img-fluid" src="./../images/NSH.png" alt="NSH" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NSH</td>
+                      <td class="leftAlign">Peter Laviolette</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N2JD</span><img class="img-fluid" src="./../images/NJD.png" alt="NJD" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NJD</td>
+                      <td class="leftAlign">John Hynes</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
+                      <td>0.000</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N3YI</span><img class="img-fluid" src="./../images/NYI.png" alt="NYI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NYI</td>
+                      <td class="leftAlign">Barry Trotz</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">N4YR</span><img class="img-fluid" src="./../images/NYR.png" alt="NYR" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">NYR</td>
+                      <td class="leftAlign">David Quinn</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">OTT</span><img class="img-fluid" src="./../images/OTT.png" alt="OTT" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">OTT</td>
+                      <td class="leftAlign">D.J. Smith</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">PHI</span><img class="img-fluid" src="./../images/PHI.png" alt="PHI" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">PHI</td>
+                      <td class="leftAlign">Alain Vigneault</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">PIT</span><img class="img-fluid" src="./../images/PIT.png" alt="PIT" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">PIT</td>
+                      <td class="leftAlign">Mike Sullivan</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1.000</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">SJS</span><img class="img-fluid" src="./../images/SJS.png" alt="SJS" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">SJS</td>
+                      <td class="leftAlign">Peter DeBoer</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1.000</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">STL</span><img class="img-fluid" src="./../images/STL.png" alt="STL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">STL</td>
+                      <td class="leftAlign">Craig Berube</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1.000</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">TBL</span><img class="img-fluid" src="./../images/TBL.png" alt="TBL" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">TBL</td>
+                      <td class="leftAlign">Jon Cooper</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">TOR</span><img class="img-fluid" src="./../images/TOR.png" alt="TOR" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">TOR</td>
+                      <td class="leftAlign">Mike Babcock</td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>0</td>
+                      <td>2</td>
+                      <td>1.000</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>2</td>
+                      <td>2</td>
+                      <td>0</td>
+                      <td>2</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">VAN</span><img class="img-fluid" src="./../images/VAN.png" alt="VAN" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">VAN</td>
+                      <td class="leftAlign">Travis Green</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">VGK</span><img class="img-fluid" src="./../images/VGK.png" alt="VGK" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">VGK</td>
+                      <td class="leftAlign">Gerard Gallant</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">W1SH</span><img class="img-fluid" src="./../images/WSH.png" alt="WSH" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">WSH</td>
+                      <td class="leftAlign">Todd Reirden</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr height="75">
+                      <td class="leftAlign">2019-2020</td>
+                      <td class="leftAlign"><span style="font-size: 0;">W2PG</span><img class="img-fluid" src="./../images/WPG.png" alt="WPG" style="width:3.25em; padding-right:3%;"></td>
+                      <td style="display:none;">WPG</td>
+                      <td class="leftAlign">Paul Maurice</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
+                      <td>0.000</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>-1</td>
                     </tr>
                   </tbody>
                    <caption style="color: #656565;">&nbsp;<b> All data through Dec. 2018 via Prashanth Iyer, data from Jan. 2019 - Present via <a style="color: #656565; text-decoration:underline; text-underline-position: under;" href="Evolving-Hockey.com">Evolving-Hockey.com</a></b></caption>
