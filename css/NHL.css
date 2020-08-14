@@ -297,6 +297,19 @@
       text-align: left;
       font-size: 12px;
     }
+    /*SEA*/
+    .Kraken{
+      background: #96d8d8; 
+      color: #001425;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Kraken1{
+      background: #001425;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
     /*SJS*/
     .Sharks{
       background:  #006D75;

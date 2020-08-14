@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Behind the Benches: A public database on what hockey coaches do and for how long they've been doing it. NHL | AHL | CWHL | NWHL | NCAA">
+  <meta name="keywords" content="Behind the Benches, NHL, AHL, CWHL, NWHL, NCAA, Hockey Coaches, Coach, Coaches, Video Coach, Skills Coach, Goaltending, Goaltending Coach, Assistant, Assistant Coach, Assistant Coaches, Head Coach, Behind the Bench, BenchBosses, Bench Bosses, GM, General Manager, General Managers">
+  <link rel="icon" href="./../images/behindthebenches.ico">
+  <title>Men's NCAA Coaches | Behind the Benches</title>
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- ==================== VENDOR STYLES ====================== -->
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- FONT AWESOME-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  <!-- ANIMATE.CSS-->
+  <link rel="stylesheet" href="./../css/animate.css">
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- ================== PAGE VENDOR STYLES =================== -->
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- Datatables-->
+  <link rel="stylesheet" href="./../css/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="./../css/keyTable.bootstrap.css">
+  <link rel="stylesheet" href="./../css/responsive.bootstrap.css">
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- =================== BOOTSTRAP STYLES ==================== -->
+  <!--///////////////////////////////////////////////////////////-->
+  <link rel="stylesheet" href="./../css/bootstrap.css" id="bscss">
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- ====================== APP STYLES ======================= -->
+  <!--///////////////////////////////////////////////////////////-->
+  <link rel="stylesheet" href="./../css/app.css" id="maincss">
+  <link rel="stylesheet" href="./../css/NCAA.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- ==================== CSS PAGE STYLES ==================== -->
+  <!--///////////////////////////////////////////////////////////-->
+  <style type="text/css" class="init">
+    thead, .dataTables_length, .dataTables_info, .dataTables_paginate, .paging_simple_numbers{
+      visibility: hidden;
+    }
+
+    @media screen and (max-width: 980px) {
+      .row-border {
+      position: relative;
+      -webkit-transition: all 0.25s ease-out;
+      -moz-transition: all 0.25s ease-out;
+      -o-transition: all 0.25s ease-out;
+      -ms-transition: all 0.25s ease-out;
+      transition: all 0.25s ease-out;
+      width:calc(100% + 220px);
+      font-size: 12px;
+      }  
+      h1{
+        font-size: 30px;
+        }
+    }
+ 
+    .dataTables_filter{
+      padding-right: 10%;
+    }
+
+    label{
+      font-size: 16px;
+    }
+
+    .form-control{
+      background: rgb(245,245,245);
+    }
+
+    .no-js #loader { 
+      display: none;  
+    }
+
+    .js #loader { 
+      display: block;
+      position: absolute; 
+      left: 100px; 
+      top: 0; 
+    }
+
+    .se-pre-con {
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: url(./../images/images/loader-64x/Preloader_5.gif) center no-repeat #fff;
+    }
+  </style>
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- =================== GOOGLE ANALYTICS ==================== -->
+  <!--///////////////////////////////////////////////////////////-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126807142-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-126807142-1');
+  </script>
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- =================== PAGE VENDER SCRIPTS ================= -->
+  <!--///////////////////////////////////////////////////////////-->
+  <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- ===================== PAGE SCRIPT ======================= -->
+  <!--///////////////////////////////////////////////////////////-->
+  <script type="text/javascript" class="init">
+    $(document).ready(function() {
+      var groupColumn = 1;
+      var table = $('#example').DataTable({
+          "columnDefs": [
+              { "visible": false, "targets": groupColumn }
+          ],
+          "order": [[ groupColumn, 'asc' ]],
+          "displayLength": 1000,
+          "drawCallback": function ( settings ) {
+              var api = this.api();
+              var rows = api.rows( {page:'current'} ).nodes();
+              var last=null;
+   
+              api.column(groupColumn, {page:'current'} ).data().each( function ( group, i ) {
+                  if ( last !== group ) {
+                      $(rows).eq( i ).before(
+                           '<tr class="group"><td class="'+group+'" colspan="8"><img src="./images/'+group+'.png" alt="'+group+'" style="height:1.3em;">&nbsp; '+group+'</td></tr>'+
+              '<tr class="group">'+
+              '<th class="'+group+1+'">Conference</th><th class="'+group+1+'">Head</th><th class="'+group+1+'">Associate</th><th class="'+group+1+'">Assistant</th><th class="'+group+1+'">Goaltending</th><th class="'+group+1+'">Volunteer</th><th class="'+group+1+'">Analytics</th><th class="'+group+1+'">Video</th></tr>'
+                      );
+   
+                      last = group;
+                  }
+              } );
+          }
+      } );
+      $('#example tbody').on( 'click', 'tr.group', function () {
+          var currentOrder = table.order()[0];
+          if ( currentOrder[0] === groupColumn && currentOrder[1] === 'asc' ) {
+              table.order( [ groupColumn, 'desc' ] ).draw();
+          }
+          else {
+              table.order( [ groupColumn, 'asc' ] ).draw();
+          }
+      } );
+    } );
+
+   $(document).ready(function() {
+        $(window).scroll(function() {
+          if ($(this).scrollTop() > 200) {
+            $('.go-top').fadeIn(200);
+          } else {
+            $('.go-top').fadeOut(200);
+          }
+        });
+        $('.go-top').click(function(event) {
+          event.preventDefault(); 
+          $('html, body').animate({scrollTop: 0}, 300);
+        })
+      });
+    $(window).load(function() {
+        $(".se-pre-con").fadeOut("slow");;
+     });
+  </script>
+</head>
+<!--///////////////////////////////////////////////////////////-->
+<!-- ========================= BODY ========================== -->
+<!--///////////////////////////////////////////////////////////-->
+<body style="background:white;">
+  <div class="se-pre-con"></div>
+   <div class="wrapper">
+      <!--///////////////////////////////////////////////////////////-->
+      <!-- ===================== TOP NAV START ===================== -->
+      <!--///////////////////////////////////////////////////////////-->
+      <header class="topnavbar-wrapper"> 
+         <nav class="navbar topnavbar" style="background:black;"> 
+            <div class="navbar-header"> 
+               <a class="navbar-brand" href="./../index.html">
+                  <div class="brand-logo" style="color:white; font-size: 18px;">
+                     <img class="img-fluid" src="./../images/behindthebenches.png" alt="App Logo" style="width:2em;"> Behind the Benches
+                  </div>
+                  <div class="brand-logo-collapsed" style="color:white;">
+                     <img class="img-fluid" src="./../images/behindthebenches.png" alt="App Logo" style="width:2em;">
+                  </div>
+               </a>
+            </div>
+            <ul class="navbar-nav mr-auto flex-row" >
+               <li class="nav-item">
+                  <a class="nav-link d-none d-md-block d-lg-block d-xl-block" href="#" data-trigger-resize="" data-toggle-state="aside-collapsed">
+                     <i class="fa fa-bars" aria-hidden="true"></i>
+                  </a>
+                  <a class="nav-link sidebar-toggle d-md-none" href="#" data-toggle-state="aside-toggled" data-no-persist="true">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                  </a>
+               </li>
+            </ul>
+            <ul class="navbar-nav flex-row" >
+              <li class="nav-item d-none d-md-block">
+                <a class="nav-link" href="https://www.twitter.com/BenchBosses">
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+                <li class="nav-item d-none d-md-block">
+                <a class="nav-link" href="mailto:benchbosses@gmail.com" target="_blank">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="nav-item d-none d-md-block">
+                <a class="nav-link" href="https://www.patreon.com/behindthebenches">
+                  <i class="fab fa-patreon" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="nav-item d-none d-md-block"> 
+                <a class="nav-link" href="#" data-toggle-fullscreen="">
+                  <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+         </nav>
+      </header>
+      <!--///////////////////////////////////////////////////////////-->
+      <!-- ===================== TOP NAV END ======================= -->
+      <!--///////////////////////////////////////////////////////////-->
+
+      <!--///////////////////////////////////////////////////////////-->
+      <!-- ====================== SIDEBAR START ==================== -->
+      <!--///////////////////////////////////////////////////////////-->
+      <aside class="aside-container">
+        <div class="aside-inner">
+          <nav class="sidebar" data-sidebar-anyclick-close="" style="background:rgb(245,245,245);" >
+            <ul class="sidebar-nav">
+              <li class="nav-heading ">
+                <span data-localize="sidebar.heading.HEADER">NCAA</span>
+              </li>
+              <li class=" ">
+                <a href="./index.html" title="NCAA" >
+                  <img class="img-fluid" src="./../images/ncaa.png" alt="App Logo" style="width:2.25em; padding-right:3%;">
+                    <span data-localize="sidebar.nav.NCAA"> NCAA</span>
+                </a>
+                <a href="./MensNCAA.html" title="Men's NCAA">
+                  <img class="img-fluid" src="./images/mens.png" alt="Men's NCAA" style="width:2.25em; padding-right:3%;">
+                  <span data-localize="sidebar.nav.MensNCAA"> Men's NCAA</span>
+                </a>
+                <a href="./WomensNCAA.html" title="Women's NCAA">
+                  <img class="img-fluid" src="./images/womens.png" alt="Women's NCAA" style="width:2.25em; padding-right:3%;">
+                  <span data-localize="sidebar.nav.WomensNCAA"> Women's NCAA</span>
+                </a>
+              </li>
+              <hr>
+              <li class="nav-heading ">
+                <span data-localize="sidebar.heading.HEADER">League</span>
+              </li>
+              <li class=" ">
+                <a href="./../NHL/index.html" title="NHL" >
+                  <img class="img-fluid" src="./../images/NHL.png" alt="App Logo" style="width:2.25em; padding-right:3%;">
+                    <span data-localize="sidebar.nav.NHL"> NHL</span>
+                </a>
+                <a href="./../NWHL/index.html" title="NWHL" >
+                  <img class="img-fluid" src="./../images/NWHL.png" alt="App Logo" style="width:2.25em; padding-right:3%;">
+                    <span data-localize="sidebar.nav.NWHL"> NWHL</span>
+                </a>
+                <a href="./../CWHL/index.html" title="CWHL" >
+                  <img class="img-fluid" src="./../images/CWHL.png" alt="App Logo" style="width:2.25em; padding-right:3%;">
+                    <span data-localize="sidebar.nav.CWHL"> CWHL</span>
+                </a>
+                <a href="./../AHL/index.html" title="AHL" >
+                  <img class="img-fluid" src="./../images/AHL.png" alt="App Logo" style="width:2.25em; padding-right:3%;">
+                    <span data-localize="sidebar.nav.AHL"> AHL &nbsp; -&nbsp;  <small><i>Coming Soon</i></small></span>
+                </a>
+              </li>
+              <hr>
+              <li class=" ">
+                <a href="./../about.html" title="about" >
+                  <i class="fa fa-hockey-puck" aria-hidden="true" style="width:2.25em; padding-right:3%;"></i>
+                    <span data-localize="sidebar.nav.ABOUT">  About</span>
+                </a>
+                <a href="mailto:benchbosses@gmail.com" target="_blank" title="email" >
+                  <i class="fa fa-envelope" aria-hidden="true" style="width:2.25em; padding-right:3%;"></i>
+                    <span data-localize="sidebar.nav.EMAIL"> Contact Us</span>
+                </a>
+                <a href="https://www.twitter.com/BenchBosses" title="twitter" >
+                  <i class="fab fa-twitter" aria-hidden="true" style="width:2.25em; padding-right:3%;"></i>
+                    <span data-localize="sidebar.nav.TWITTER"> BenchBosses</span>
+                </a>
+                <a href="https://www.patreon.com/behindthebenches" title="patreon" >
+                  <i class="fab fa-patreon" aria-hidden="true" style="width:2.25em; padding-right:3%;"></i>
+                    <span data-localize="sidebar.nav.PATREON"> Support Us</span>
+                </a>
+              </li>
+            </ul> 
+          </nav>
+        </div>
+      </aside>
+      <!--///////////////////////////////////////////////////////////-->
+      <!-- ====================== SIDEBAR END ====================== -->
+      <!--///////////////////////////////////////////////////////////-->
+
+      <!--///////////////////////////////////////////////////////////-->
+      <!-- ====================== MAIN START ======================= -->
+      <!--///////////////////////////////////////////////////////////-->
+      <section class="section-container" style="background:white;" >
+         <div class="content-wrapper">
+            <div class=" text-center">
+               <h1 class="text-center" style="padding:1%; color:black;line-height: 1.5;"> Men's NCAA Coaches<br>2019 - 2020 <h1>
+            </div>
+            <div class="row" style="overflow: scroll; max-width: 100%;" >
+              <div class="col-xl-12">
+                <!--///////////////////////////////////////////////////////////-->
+                <!-- ============== 2018 - 2019 COACHES START ================ -->
+                <!--///////////////////////////////////////////////////////////-->
+                <table id="example" class="row-border" style="width:100%;">
+                  <thead>
+                    <tr>
+                      <th> </th>
+                      <th> </th>
+                      <th> </th>
+                      <th> </th>
+                      <th> </th>  
+                      <th> </th>
+                      <th> </th>
+                      <th> </th>
+                      <th> </th>  
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!--///////////////////////////////////////////////////////////-->
+                    <!-- ===================== BOSTON PRIDE ====================== -->
+                    <!--///////////////////////////////////////////////////////////-->
+                    <tr>
+                      <td>Atlantic</td>
+                      <td>Air Force Falcons</td>
+                      <td>Frank Serratore</td>
+                      <td>Andy Berg<br>Joe Doyle</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>WCHA</td>
+                      <td>Alabama Huntsville Chargers</td>
+                      <td>Mike Corbett</td>
+                      <td> </td>
+                      <td>Gavin Morgan<br>Lance West</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>WCHA</td>
+                      <td>Alaska Nanooks</td>
+                      <td>Erik Largen</td>
+                      <td> </td>
+                      <td>Joe Howe<br>Karlis Zirnis</td>
+                      <td> </td>
+                      <td>Josh Erickson<br>Eric Yancey (Student)</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>WCHA</td>
+                      <td>Alaska Anchorage Seawolves</td>
+                      <td>Matt Curley</td>
+                      <td> </td>
+                      <td>Matt Bruneteau<br>Mark Phalon</td>
+                      <td> </td>
+                      <td>PD Melgoza</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Atlantic</td>
+                      <td>American International Yellow Jackets</td>
+                      <td>Eric Lang</td>
+                      <td>Stephen Wielder</td>
+                      <td>Cory Schneider</td>
+                      <td> </td>
+                      <td>Patrick Tabb</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Indy</td>
+                      <td>Arizona State Sun Devils</td>
+                      <td>Greg Powers</td>
+                      <td> </td>
+                      <td>Alex Hicks<br>Mike Field</td>
+                      <td> </td>
+                      <td>Eddie Läck</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Atlantic</td>
+                      <td>Army Black Knights</td>
+                      <td>Brian Riley</td>
+                      <td>Zach McKelvie</td>
+                      <td>2LT Dalton Macafee</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>WCHA</td>
+                      <td>Bemidji State Beavers</td>
+                      <td>Tom Serratore</td>
+                      <td> </td>
+                      <td>Travis Winter<br>Eddie Olczyk</td>
+                      <td> </td>
+                      <td>Red Brow</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Atlantic</td>
+                      <td>Bentley Falcons</td>
+                      <td>Ryan Soderquist</td>
+                      <td> </td>
+                      <td>Jon Coleman<br>Stephen Needham</td>
+                      <td>Clay Adams (V)</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Hockey East</td>
+                      <td>Boston College Eagles</td>
+                      <td>Jerry York</td>
+                      <td> </td>
+                      <td>Mike Ayers<br>Brendan Buckley<br>Marty McInnis</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td>Lucas Hurtt (V)</td>
+                    </tr>
+                    <tr>
+                      <td>Hockey East</td>
+                      <td>Boston University Terriers</td>
+                      <td>Albie O&#39;Connell</td>
+                      <td>Paul Pearl</td>
+                      <td>Len Quesnelle</td>
+                      <td>Brian Eklund (V)</td>
+                      <td> </td>
+                      <td>Kathryn Yates</td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>WCHA</td>
+                      <td>Bowling Green Falcons</td>
+                      <td>Ty Eigner</td>
+                      <td> </td>
+                      <td>Curtis Carr<br>Maco Balkovec</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Brown Bears</td>
+                      <td>Brendan Whittet</td>
+                      <td>Jason Guerriero</td>
+                      <td>Jason Smith</td>
+                      <td>Ed Kesell (V)</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Atlantic</td>
+                      <td>Canisius Golden Griffins</td>
+                      <td>Trevor Large</td>
+                      <td> </td>
+                      <td>Taylor Nelson<br>Martin Hlinka</td>
+                      <td> </td>
+                      <td>Daniel Paille</td>
+                      <td> </td>
+                      <td>Cody Ward</td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Clarkson Golden Knights </td>
+                      <td>Casey Jones</td>
+                      <td>Josh Hauge</td>
+                      <td>Mike Towns</td>
+                      <td>Andrew Mercer (V)</td>
+                      <td> </td>
+                      <td> </td>
+                      <td>Brandon Grillo</td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Colgate Raiders</td>
+                      <td>Don Vaughan</td>
+                      <td> </td>
+                      <td>Dana Borges<br>Brett Riley</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>NCHC</td>
+                      <td>Colorado College Tigers</td>
+                      <td>Mike Haviland</td>
+                      <td> </td>
+                      <td>R.J. Enga<br>Leon Hayward</td>
+                      <td> </td>
+                      <td>Brent Seidel</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Cornell Big Red</td>
+                      <td>Mike Schafer</td>
+                      <td>Ben Seyer</td>
+                      <td>Sean Flanagan</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Dartmouth Big Green</td>
+                      <td>Bob Gaudet</td>
+                      <td>David Lassonde</td>
+                      <td>John Rose</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>NCHC</td>
+                      <td>Denver Pioneers</td>
+                      <td>David Carle</td>
+                      <td> </td>
+                      <td>Tavis Macmillan<br>Dallas Ferguson</td>
+                      <td> </td>
+                      <td>Corey Wogtech</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>WCHA</td>
+                      <td>Ferris State Bulldogs</td>
+                      <td>Bob Daniels</td>
+                      <td>Drew Famulak</td>
+                      <td>Mark Kaufman</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Harvard Crimson</td>
+                      <td>Ted Donato</td>
+                      <td> </td>
+                      <td>Jim Tortorella<br>James Marcou</td>
+                      <td>Brian Robinson (V)</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Atlantic</td>
+                      <td>Holy Cross Crusaders</td>
+                      <td>David Berard</td>
+                      <td>Peter Roundy</td>
+                      <td>Max Mobley</td>
+                      <td> </td>
+                      <td>Jon Lounsbury</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>WCHA</td>
+                      <td>Lake Superior State Lakers</td>
+                      <td>Damon Whitten</td>
+                      <td> </td>
+                      <td>Mike York<br>Zack Cisek</td>
+                      <td> </td>
+                      <td>Mike Gugin</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Hockey East</td>
+                      <td>Maine Black Bears</td>
+                      <td>Red Gendron</td>
+                      <td>Ben Guite</td>
+                      <td>Alfie Michaud</td>
+                      <td> </td>
+                      <td>Scott Hillman</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Hockey East</td>
+                      <td>UMass Minutemen</td>
+                      <td>Greg Carvel</td>
+                      <td>Ben Barr<br>Jared Demichiel</td>
+                      <td> </td>
+                      <td> </td>
+                      <td>Ryan Bliss</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Atlantic</td>
+                      <td>Mercyhurst Lakers</td>
+                      <td>Rick Gotkin</td>
+                      <td>Greg Gardner</td>
+                      <td>Tom Upton</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td>Ryan Rebmann (Student)</td>
+                    </tr>
+                    <tr>
+                      <td>Hockey East</td>
+                      <td>Merrimack Warriors</td>
+                      <td>Scott Borek</td>
+                      <td> </td>
+                      <td>Josh Ciocco<br>Dan Jewell</td>
+                      <td>Jim McNiff (V)</td>
+                      <td> </td>
+                      <td> </td>
+                      <td>David Woodford (Student)</td>
+                    </tr>
+                    <tr>
+                      <td>NCHC</td>
+                      <td>Miami RedHawks</td>
+                      <td>Chris Bergeron</td>
+                      <td>Barry Schutte<br>Eric Rud</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Big 10</td>
+                      <td>Michigan Wolverines</td>
+                      <td>Mel Pearson</td>
+                      <td>Bill Muckalt</td>
+                      <td>Kris Mayotte</td>
+                      <td> </td>
+                      <td>Matt Hunwick</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Big 10</td>
+                      <td>Michigan State Spartans</td>
+                      <td>Danton Cole</td>
+                      <td> </td>
+                      <td>Chris Luongo<br>Joe Exter</td>
+                      <td> </td>
+                      <td>Jim Slater</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Big 10</td>
+                      <td>Minnesota Golden Gophers</td>
+                      <td>Bob Motzko</td>
+                      <td> </td>
+                      <td>Garret Raboin<br>Ben Gordon<br>Stu Bickel (Undergraduate)</td>
+                      <td>Karel Popper (V)</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>NCHC</td>
+                      <td>Minnesota Duluth Bulldogs</td>
+                      <td>Scott Sandelin</td>
+                      <td>Jason Herter</td>
+                      <td>Adam Krause</td>
+                      <td> </td>
+                      <td>Brant Nicklin</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>WCHA</td>
+                      <td>Minnesota State Mavericks</td>
+                      <td>Mike Hastings</td>
+                      <td>Todd Knott</td>
+                      <td>Darren Blue</td>
+                      <td>Brennan Poderzay (V)</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Hockey East</td>
+                      <td>New Hampshire Wildcats</td>
+                      <td>Mike Souza</td>
+                      <td>Glenn Stewart</td>
+                      <td>Jeff Giuliano</td>
+                      <td>Ty Conklin</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Atlantic</td>
+                      <td>Niagara Purple Eagles</td>
+                      <td>Jason Lammers</td>
+                      <td>Matt Nicholson</td>
+                      <td>Andy Boschetto</td>
+                      <td> </td>
+                      <td>Ian Burt</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>NCHC</td>
+                      <td>North Dakota Fighting Hawks</td>
+                      <td>Brad Berry</td>
+                      <td>Dane Jackson</td>
+                      <td>Karl Goehring</td>
+                      <td> </td>
+                      <td>Jason Ulmer</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Hockey East</td>
+                      <td>Northeastern Huskies</td>
+                      <td>Jim Madigan</td>
+                      <td>Jerry Keefe</td>
+                      <td>Mike McLaughlin</td>
+                      <td>Ed Walsh (V)</td>
+                      <td> </td>
+                      <td>Louis Finocchiaro</td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>WCHA</td>
+                      <td>Northern Michigan Wildcats</td>
+                      <td>Grant Potulny</td>
+                      <td>Byron Pool</td>
+                      <td>Rob Lehtinen</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Big 10</td>
+                      <td>Notre Dame Fighting Irish</td>
+                      <td>Jeff Jackson</td>
+                      <td>Paul Pooley<br>Andy Slaggert</td>
+                      <td> </td>
+                      <td> </td>
+                      <td>Kyle Lawson</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Big 10</td>
+                      <td>Ohio State Buckeyes</td>
+                      <td>Steve Rohlik</td>
+                      <td>Steve Miller</td>
+                      <td>JB Bittner</td>
+                      <td> </td>
+                      <td>Dustin Carlson</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>NCHC</td>
+                      <td>Omaha Mavericks</td>
+                      <td>Mike Gabinet</td>
+                      <td> </td>
+                      <td>Dave Noel-Bernier<br>Paul Jerrard<br>Mike Lewis (Strength and Conditioning)</td>
+                      <td> </td>
+                      <td>Kirk Thompson</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Big 10</td>
+                      <td>Penn State Nittany Lions</td>
+                      <td>Guy Gadowsky</td>
+                      <td>Keith Fisher</td>
+                      <td>Matt Lindsay</td>
+                      <td> </td>
+                      <td>Andrew Magera</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Princeton Tigers</td>
+                      <td>Ron Fogarty</td>
+                      <td>Brad Dexter</td>
+                      <td>Stavros Paskaris</td>
+                      <td> </td>
+                      <td>Tommy Davis</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Hockey East</td>
+                      <td>Providence Friars</td>
+                      <td>Nate Leaman</td>
+                      <td>Ron Rolston</td>
+                      <td>Joel Beal</td>
+                      <td> </td>
+                      <td>Bruce Irving</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Quinnipiac Bobcats</td>
+                      <td>Rand Pecknold</td>
+                      <td>Bill Riga<br>Joe Dumais</td>
+                      <td> </td>
+                      <td>Justin Eddy</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Rensselaer Polytechnic Institute</td>
+                      <td>Dave Smith</td>
+                      <td> </td>
+                      <td>Scott Moser<br>Chuck Weber<br>Justin Markley</td>
+                      <td> </td>
+                      <td>Nate Skidmore</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Atlantic</td>
+                      <td>RIT Tigers</td>
+                      <td>Wayne Wilson</td>
+                      <td>Brian Hills</td>
+                      <td>Dave Insalaco</td>
+                      <td>Len Perno (V)</td>
+                      <td> </td>
+                      <td>Matt Hoffman</td>
+                      <td>Mark Lessard</td>
+                    </tr>
+                    <tr>
+                      <td>Atlantic</td>
+                      <td>Robert Morris Colonials</td>
+                      <td>Derek Schooley</td>
+                      <td> </td>
+                      <td>Michael Gershon<br>Ryan Cruthers</td>
+                      <td> </td>
+                      <td>Brianne McLaughlin-Bittle</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Atlantic</td>
+                      <td>Sacred Heart Pioneers</td>
+                      <td>C.J. Marottolo</td>
+                      <td> </td>
+                      <td>Scott McDougall<br>Paul Kirtland</td>
+                      <td> </td>
+                      <td>Craig Height</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>NCHC</td>
+                      <td>St. Cloud State Huskies</td>
+                      <td>Brett Larson</td>
+                      <td> </td>
+                      <td>Mike Gibbons<br>Nick Oliver</td>
+                      <td>Matt Bertram (V)</td>
+                      <td> </td>
+                      <td> </td>
+                      <td>Nick Tomczyk</td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>St. Lawrence Saints</td>
+                      <td>Brent Brekke</td>
+                      <td> </td>
+                      <td>Tommy Hill<br>Ben Murphy</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Hockey East</td>
+                      <td>UConn Huskies</td>
+                      <td>Mike Cavanaugh</td>
+                      <td>Joe Pereira</td>
+                      <td>Tyler Helton</td>
+                      <td> </td>
+                      <td>Matt Michno</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Hockey East</td>
+                      <td>UMass Lowell River Hawks</td>
+                      <td>Norm Bazin</td>
+                      <td>Andy Jones</td>
+                      <td>Juliano Pagliero</td>
+                      <td> </td>
+                      <td>Tom Ford</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Union Bulldogs</td>
+                      <td>Rick Bennett</td>
+                      <td>Jason Tapp</td>
+                      <td>John Ronan</td>
+                      <td> </td>
+                      <td>Wll Messa</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Hockey East</td>
+                      <td>Vermont Catamounts</td>
+                      <td>Kevin Sneddon</td>
+                      <td>Kevin Patrick</td>
+                      <td>Jeff Hill</td>
+                      <td> </td>
+                      <td>Matt Anderson</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>NCHC</td>
+                      <td>Western Michigan Broncos</td>
+                      <td>Andy Murray</td>
+                      <td>Pat Ferschweiler<br>Dave Shyiak</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Big 10</td>
+                      <td>Wisconsin Badgers</td>
+                      <td>Tony Granato</td>
+                      <td>Mark Osiecki<br>Mark Strobel</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Yale Bulldogs</td>
+                      <td>Keith Allain</td>
+                      <td> </td>
+                      <td>Josh Siembida<br>Ryan Donald</td>
+                      <td> </td>
+                      <td>Bill Maniscalco</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!--///////////////////////////////////////////////////////////-->
+                <!-- ============== 2018 - 2019 COACHES END ================== -->
+                <!--///////////////////////////////////////////////////////////-->
+              </div>
+            </div>
+          <a href="#" class="go-top">Go Top</a>
+          <br><br>
+        </div>
+      </section>
+      <!--///////////////////////////////////////////////////////////-->
+      <!-- ====================== MAIN END ========================= -->
+      <!--///////////////////////////////////////////////////////////-->
+      <footer class="footer-container">
+        <span><small>2019 - Behind the Benches</small></span>
+      </footer>
+    </div>
+    <!--///////////////////////////////////////////////////////////-->
+    <!-- =================== VENDER SCRIPTS ====================== -->
+    <!--///////////////////////////////////////////////////////////-->
+    <!-- MODERNIZR-->
+    <script src="./../js/modernizr.custom.js"></script>
+    <!-- JQUERY-->
+    <script src="./../js/jquery.js"></script>
+    <!-- BOOTSTRAP-->
+    <script src="./../js/popper.js"></script>
+    <script src="./../js/bootstrap.js"></script>
+    <!-- STORAGE API-->
+    <script src="./../js/js.storage.js"></script>
+    <!-- JQUERY EASING-->
+    <script src="./../js/jquery.easing.js"></script>
+    <!-- ANIMO-->
+    <script src="./../js/animo.js"></script>
+    <!-- SCREENFULL-->
+    <script src="./../js/screenfull.js"></script>
+    <!-- LOCALIZE-->
+    <script src="./../js/jquery.localize.js"></script>
+    <!--///////////////////////////////////////////////////////////-->
+    <!-- ================= PAGE VENDER SCRIPTS =================== -->
+    <!--///////////////////////////////////////////////////////////-->
+    <!-- Datatables-->
+    <script src="./../js/jquery.dataTables.js"></script>
+    <script src="./../js/dataTables.bootstrap4.js"></script>
+    <script src="./../js/dataTables.buttons.js"></script>
+    <script src="./../js/buttons.bootstrap.js"></script>
+    <script src="./../js/buttons.colVis.js"></script>
+    <script src="./../js/buttons.flash.js"></script>
+    <script src="./../js/buttons.html5.js"></script>
+    <script src="./../js/buttons.print.js"></script>
+    <script src="./../js/dataTables.keyTable.js"></script>
+    <script src="./../js/dataTables.responsive.js"></script>
+    <script src="./../js/responsive.bootstrap.js"></script>
+    <script src="./../js/jszip.js"></script>
+    <script src="./../js/pdfmake.js"></script>
+    <script src="./../js/vfs_fonts.js"></script>
+    <!--///////////////////////////////////////////////////////////-->
+    <!-- ====================== APP SCRIPTS ====================== -->
+    <!--///////////////////////////////////////////////////////////-->
+    <script src="./../js/app.js"></script>
+  </body>
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- ======================= BODY END ======================== -->
+  <!--///////////////////////////////////////////////////////////-->
+</html>

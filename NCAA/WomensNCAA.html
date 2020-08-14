@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Behind the Benches: A public database on what hockey coaches do and for how long they've been doing it. NHL | AHL | CWHL | NWHL | NCAA">
+  <meta name="keywords" content="Behind the Benches, NHL, AHL, CWHL, NWHL, NCAA, Hockey Coaches, Coach, Coaches, Video Coach, Skills Coach, Goaltending, Goaltending Coach, Assistant, Assistant Coach, Assistant Coaches, Head Coach, Behind the Bench, BenchBosses, Bench Bosses, GM, General Manager, General Managers">
+  <link rel="icon" href="./../images/behindthebenches.ico">
+  <title>Women's NCAA Coaches | Behind the Benches</title>
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- ==================== VENDOR STYLES ====================== -->
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- FONT AWESOME-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  <!-- ANIMATE.CSS-->
+  <link rel="stylesheet" href="./../css/animate.css">
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- ================== PAGE VENDOR STYLES =================== -->
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- Datatables-->
+  <link rel="stylesheet" href="./../css/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="./../css/keyTable.bootstrap.css">
+  <link rel="stylesheet" href="./../css/responsive.bootstrap.css">
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- =================== BOOTSTRAP STYLES ==================== -->
+  <!--///////////////////////////////////////////////////////////-->
+  <link rel="stylesheet" href="./../css/bootstrap.css" id="bscss">
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- ====================== APP STYLES ======================= -->
+  <!--///////////////////////////////////////////////////////////-->
+  <link rel="stylesheet" href="./../css/app.css" id="maincss">
+  <link rel="stylesheet" href="./../css/NCAA.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- ==================== CSS PAGE STYLES ==================== -->
+  <!--///////////////////////////////////////////////////////////-->
+  <style type="text/css" class="init">
+    thead, .dataTables_length, .dataTables_info, .dataTables_paginate, .paging_simple_numbers{
+      visibility: hidden;
+    }
+
+    @media screen and (max-width: 980px) {
+      .row-border {
+      position: relative;
+      -webkit-transition: all 0.25s ease-out;
+      -moz-transition: all 0.25s ease-out;
+      -o-transition: all 0.25s ease-out;
+      -ms-transition: all 0.25s ease-out;
+      transition: all 0.25s ease-out;
+      width:calc(100% + 220px);
+      font-size: 12px;
+      }  
+      h1{
+        font-size: 30px;
+        }
+    }
+ 
+    .dataTables_filter{
+      padding-right: 10%;
+    }
+
+    label{
+      font-size: 16px;
+    }
+
+    .form-control{
+      background: rgb(245,245,245);
+    }
+
+    .no-js #loader { 
+      display: none;  
+    }
+
+    .js #loader { 
+      display: block;
+      position: absolute; 
+      left: 100px; 
+      top: 0; 
+    }
+
+    .se-pre-con {
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: url(./../images/images/loader-64x/Preloader_5.gif) center no-repeat #fff;
+    }
+  </style>
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- =================== GOOGLE ANALYTICS ==================== -->
+  <!--///////////////////////////////////////////////////////////-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126807142-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-126807142-1');
+  </script>
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- =================== PAGE VENDER SCRIPTS ================= -->
+  <!--///////////////////////////////////////////////////////////-->
+  <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- ===================== PAGE SCRIPT ======================= -->
+  <!--///////////////////////////////////////////////////////////-->
+  <script type="text/javascript" class="init">
+    $(document).ready(function() {
+      var groupColumn = 1;
+      var table = $('#example').DataTable({
+          "columnDefs": [
+              { "visible": false, "targets": groupColumn }
+          ],
+          "order": [[ groupColumn, 'asc' ]],
+          "displayLength": 1000,
+          "drawCallback": function ( settings ) {
+              var api = this.api();
+              var rows = api.rows( {page:'current'} ).nodes();
+              var last=null;
+   
+              api.column(groupColumn, {page:'current'} ).data().each( function ( group, i ) {
+                  if ( last !== group ) {
+                      $(rows).eq( i ).before(
+                           '<tr class="group"><td class="'+group+'" colspan="6"><img src="./images/'+group+'.png" alt="'+group+'" style="height:1.3em;">&nbsp; '+group+'</td></tr>'+
+              '<tr class="group">'+
+              '<th class="'+group+1+'">Conference</th><th class="'+group+1+'">Head</th><th class="'+group+1+'">Associate</th><th class="'+group+1+'">Assistant</th><th class="'+group+1+'">Goaltending</th><th class="'+group+1+'">Video</th></tr>'
+                      );
+   
+                      last = group;
+                  }
+              } );
+          }
+      } );
+      $('#example tbody').on( 'click', 'tr.group', function () {
+          var currentOrder = table.order()[0];
+          if ( currentOrder[0] === groupColumn && currentOrder[1] === 'asc' ) {
+              table.order( [ groupColumn, 'desc' ] ).draw();
+          }
+          else {
+              table.order( [ groupColumn, 'asc' ] ).draw();
+          }
+      } );
+    } );
+
+   $(document).ready(function() {
+        $(window).scroll(function() {
+          if ($(this).scrollTop() > 200) {
+            $('.go-top').fadeIn(200);
+          } else {
+            $('.go-top').fadeOut(200);
+          }
+        });
+        $('.go-top').click(function(event) {
+          event.preventDefault(); 
+          $('html, body').animate({scrollTop: 0}, 300);
+        })
+      });
+    $(window).load(function() {
+        $(".se-pre-con").fadeOut("slow");;
+     });
+  </script>
+</head>
+<!--///////////////////////////////////////////////////////////-->
+<!-- ========================= BODY ========================== -->
+<!--///////////////////////////////////////////////////////////-->
+<body style="background:white;">
+  <div class="se-pre-con"></div>
+   <div class="wrapper">
+      <!--///////////////////////////////////////////////////////////-->
+      <!-- ===================== TOP NAV START ===================== -->
+      <!--///////////////////////////////////////////////////////////-->
+      <header class="topnavbar-wrapper"> 
+         <nav class="navbar topnavbar" style="background:black;"> 
+            <div class="navbar-header"> 
+               <a class="navbar-brand" href="./../index.html">
+                  <div class="brand-logo" style="color:white; font-size: 18px;">
+                     <img class="img-fluid" src="./../images/behindthebenches.png" alt="App Logo" style="width:2em;"> Behind the Benches
+                  </div>
+                  <div class="brand-logo-collapsed" style="color:white;">
+                     <img class="img-fluid" src="./../images/behindthebenches.png" alt="App Logo" style="width:2em;">
+                  </div>
+               </a>
+            </div>
+            <ul class="navbar-nav mr-auto flex-row" >
+               <li class="nav-item">
+                  <a class="nav-link d-none d-md-block d-lg-block d-xl-block" href="#" data-trigger-resize="" data-toggle-state="aside-collapsed">
+                     <i class="fa fa-bars" aria-hidden="true"></i>
+                  </a>
+                  <a class="nav-link sidebar-toggle d-md-none" href="#" data-toggle-state="aside-toggled" data-no-persist="true">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                  </a>
+               </li>
+            </ul>
+            <ul class="navbar-nav flex-row" >
+              <li class="nav-item d-none d-md-block">
+                <a class="nav-link" href="https://www.twitter.com/BenchBosses">
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+                <li class="nav-item d-none d-md-block">
+                <a class="nav-link" href="mailto:benchbosses@gmail.com" target="_blank">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="nav-item d-none d-md-block">
+                <a class="nav-link" href="https://www.patreon.com/behindthebenches">
+                  <i class="fab fa-patreon" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="nav-item d-none d-md-block"> 
+                <a class="nav-link" href="#" data-toggle-fullscreen="">
+                  <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+         </nav>
+      </header>
+      <!--///////////////////////////////////////////////////////////-->
+      <!-- ===================== TOP NAV END ======================= -->
+      <!--///////////////////////////////////////////////////////////-->
+
+      <!--///////////////////////////////////////////////////////////-->
+      <!-- ====================== SIDEBAR START ==================== -->
+      <!--///////////////////////////////////////////////////////////-->
+      <aside class="aside-container">
+        <div class="aside-inner">
+          <nav class="sidebar" data-sidebar-anyclick-close="" style="background:rgb(245,245,245);" >
+            <ul class="sidebar-nav">
+              <li class="nav-heading ">
+                <span data-localize="sidebar.heading.HEADER">NCAA</span>
+              </li>
+              <li class=" ">
+                <a href="./index.html" title="NCAA" >
+                  <img class="img-fluid" src="./../images/ncaa.png" alt="App Logo" style="width:2.25em; padding-right:3%;">
+                    <span data-localize="sidebar.nav.NCAA"> NCAA</span>
+                </a>
+                <a href="./MensNCAA.html" title="Men's NCAA">
+                  <img class="img-fluid" src="./images/mens.png" alt="Men's NCAA" style="width:2.25em; padding-right:3%;">
+                  <span data-localize="sidebar.nav.MensNCAA"> Men's NCAA</span>
+                </a>
+                <a href="./WomensNCAA.html" title="Women's NCAA">
+                  <img class="img-fluid" src="./images/womens.png" alt="Women's NCAA" style="width:2.25em; padding-right:3%;">
+                  <span data-localize="sidebar.nav.WomensNCAA"> Women's NCAA</span>
+                </a>
+              </li>
+              <hr>
+              <li class="nav-heading ">
+                <span data-localize="sidebar.heading.HEADER">League</span>
+              </li>
+              <li class=" ">
+                <a href="./../NHL/index.html" title="NHL" >
+                  <img class="img-fluid" src="./../images/NHL.png" alt="App Logo" style="width:2.25em; padding-right:3%;">
+                    <span data-localize="sidebar.nav.NHL"> NHL</span>
+                </a>
+                <a href="./../NWHL/index.html" title="NWHL" >
+                  <img class="img-fluid" src="./../images/NWHL.png" alt="App Logo" style="width:2.25em; padding-right:3%;">
+                    <span data-localize="sidebar.nav.NWHL"> NWHL</span>
+                </a>
+                <a href="./../CWHL/index.html" title="CWHL" >
+                  <img class="img-fluid" src="./../images/CWHL.png" alt="App Logo" style="width:2.25em; padding-right:3%;">
+                    <span data-localize="sidebar.nav.CWHL"> CWHL</span>
+                </a>
+                <a href="./../AHL/index.html" title="AHL" >
+                  <img class="img-fluid" src="./../images/AHL.png" alt="App Logo" style="width:2.25em; padding-right:3%;">
+                    <span data-localize="sidebar.nav.AHL"> AHL &nbsp; -&nbsp;  <small><i>Coming Soon</i></small></span>
+                </a>
+              </li>
+              <hr>
+              <li class=" ">
+                <a href="./../about.html" title="about" >
+                  <i class="fa fa-hockey-puck" aria-hidden="true" style="width:2.25em; padding-right:3%;"></i>
+                    <span data-localize="sidebar.nav.ABOUT">  About</span>
+                </a>
+                <a href="mailto:benchbosses@gmail.com" target="_blank" title="email" >
+                  <i class="fa fa-envelope" aria-hidden="true" style="width:2.25em; padding-right:3%;"></i>
+                    <span data-localize="sidebar.nav.EMAIL"> Contact Us</span>
+                </a>
+                <a href="https://www.twitter.com/BenchBosses" title="twitter" >
+                  <i class="fab fa-twitter" aria-hidden="true" style="width:2.25em; padding-right:3%;"></i>
+                    <span data-localize="sidebar.nav.TWITTER"> BenchBosses</span>
+                </a>
+                <a href="https://www.patreon.com/behindthebenches" title="patreon" >
+                  <i class="fab fa-patreon" aria-hidden="true" style="width:2.25em; padding-right:3%;"></i>
+                    <span data-localize="sidebar.nav.PATREON"> Support Us</span>
+                </a>
+              </li>
+            </ul> 
+          </nav>
+        </div>
+      </aside>
+      <!--///////////////////////////////////////////////////////////-->
+      <!-- ====================== SIDEBAR END ====================== -->
+      <!--///////////////////////////////////////////////////////////-->
+
+      <!--///////////////////////////////////////////////////////////-->
+      <!-- ====================== MAIN START ======================= -->
+      <!--///////////////////////////////////////////////////////////-->
+      <section class="section-container" style="background:white;" >
+         <div class="content-wrapper">
+            <div class=" text-center">
+               <h1 class="text-center" style="padding:1%; color:black;line-height: 1.5;"> Women's NCAA Coaches<br>2019 - 2020 <h1>
+            </div>
+            <div class="row" style="overflow: scroll; max-width: 100%;" >
+              <div class="col-xl-12">
+                <!--///////////////////////////////////////////////////////////-->
+                <!-- ============== 2019 - 2020 COACHES START ================ -->
+                <!--///////////////////////////////////////////////////////////-->
+                <table id="example" class="row-border" style="width:100%;">
+                  <thead>
+                    <tr>
+                      <th> </th>
+                      <th> </th>
+                      <th> </th>
+                      <th> </th>
+                      <th> </th>  
+                      <th> </th>
+                      <th> </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>WCHA</td>
+                      <td>Bemidji State Beavers</td>
+                      <td>Jim Scanlan</td>
+                      <td>Amber Fryklund</td>
+                      <td>Shane Veenker</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>HE</td>
+                      <td>Boston College Eagles</td>
+                      <td>Katie Crowley</td>
+                      <td>Courtney Kennedy</td>
+                      <td>Andie Anastos</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>HE</td>
+                      <td>Boston University Terriers</td>
+                      <td>Brian Durocher</td>
+                      <td>Liz Keady Norton</td>
+                      <td>Tara Watchorn<br>Amy Zappen (V)</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Brown Bears</td>
+                      <td>Carisa Zaban Wahlig</td>
+                      <td> </td>
+                      <td>Melissa Paluch<br>Jordin Pardoski</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Clarkson Golden Knights</td>
+                      <td>Matt Desrosiers</td>
+                      <td> </td>
+                      <td>Britni Smith<br>Tony Maci<br>Emily Bruns (V)</td>
+                      <td> </td>
+                      <td>Bryan Warner</td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Colgate Raiders</td>
+                      <td>Greg Fargo</td>
+                      <td> </td>
+                      <td>Stefan Decosse<br>Chelsea Walkland<br>Chris Cobb (V)</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Cornell Big Red</td>
+                      <td>Doug Derraugh</td>
+                      <td>Edith Racine</td>
+                      <td>Dean Jackson</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Dartmouth Big Green</td>
+                      <td>Laura Schuler</td>
+                      <td> </td>
+                      <td>Matt Woodard<br>Matt Cunningham</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Indy</td>
+                      <td>Franklin Pierce Ravens</td>
+                      <td>David Stockdale</td>
+                      <td> </td>
+                      <td>Kasi Petersen<br>Steve Hennessey</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Harvard Crimson</td>
+                      <td>Katey Stone</td>
+                      <td>Lee-J Mirasolo</td>
+                      <td>Sydney Daniels</td>
+                      <td>Joe Grossman</td>
+                      <td>Bret Gilmour</td>
+                    </tr>
+                    <tr>
+                      <td>HE</td>
+                      <td>Holy Cross Crusaders</td>
+                      <td>Katie Lachapelle</td>
+                      <td>Meredith Roth</td>
+                      <td>Maddy Norton</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>CHA</td>
+                      <td>Lindenwood Lions</td>
+                      <td>Scott Spencer</td>
+                      <td> </td>
+                      <td>Cory Whitaker<br>Greg Haney</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>HE</td>
+                      <td>Maine Black Bears</td>
+                      <td>Richard Reinchenbach</td>
+                      <td> </td>
+                      <td>Sarah Reichenbach<br>Trey Flesch<br>Olivia Spellmire</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>CHA</td>
+                      <td>Mercyhurst Lakers</td>
+                      <td>Michael Sisti</td>
+                      <td> </td>
+                      <td>Kelley Steadman<br>Beth Hanrahan</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>HE</td>
+                      <td>Merrimack Warriors</td>
+                      <td>Erin Hamlen</td>
+                      <td> </td>
+                      <td>Steph Moberg<br>Chris Hall</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>WCHA</td>
+                      <td>Minnesota Duluth Bulldogs</td>
+                      <td>Maura Crowell</td>
+                      <td> </td>
+                      <td>Laura Bellamy<br>Ashleigh Brykaliuk</td>
+                      <td>Chris Esposito (V)</td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>WCHA</td>
+                      <td>Minnesota Golden Gophers</td>
+                      <td>Brad Frost</td>
+                      <td>Joel Johnson</td>
+                      <td>Bethany Brausen</td>
+                      <td>Karel Popper (V)</td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>WCHA</td>
+                      <td>Minnesota State Mavericks</td>
+                      <td>John Harrington</td>
+                      <td>Jeff Giesen</td>
+                      <td>Shari Dickerman</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>HE</td>
+                      <td>New Hampshire Wildcats</td>
+                      <td>Hilary Witt</td>
+                      <td>Stephanie Jones</td>
+                      <td>Bill Bowes</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>HE</td>
+                      <td>Northeastern Huskies</td>
+                      <td>Dave Flint</td>
+                      <td>Nick Carpenito</td>
+                      <td>Lindsay Berman</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>WCHA</td>
+                      <td>Ohio State Buckeyes</td>
+                      <td>Nadine Muzerall</td>
+                      <td> </td>
+                      <td>Milica McMillen<br>Emily West</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>CHA</td>
+                      <td>Penn State Nittany Lions</td>
+                      <td>Jeff Kampersal</td>
+                      <td> </td>
+                      <td>Allison Coomey<br>Celeste Brown</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Indy</td>
+                      <td>Post Eagles</td>
+                      <td>Heath Isaacson</td>
+                      <td> </td>
+                      <td>Travis Bokina<br>Zach Carrano</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Princeton Tigers</td>
+                      <td>Cara Morey</td>
+                      <td> </td>
+                      <td>Courtney Kessel<br>Melanie Ruzzi<br>Daniel Gould (V)</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>HE</td>
+                      <td>Providence Friars</td>
+                      <td>Matt Kelly</td>
+                      <td> </td>
+                      <td>Jake Anderson<br>Ali Domenico</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Quinnipiac Bobcats</td>
+                      <td>Cassandra Turner</td>
+                      <td> </td>
+                      <td>Eddie Ardito<br>Amanda Mazzotta</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>CHA</td>
+                      <td>RIT Tigers</td>
+                      <td>Chad Davis</td>
+                      <td> </td>
+                      <td>Hannah McGowan</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>CHA</td>
+                      <td>Robert Morris Colonials</td>
+                      <td>Paul Colontino</td>
+                      <td>Logan Bittle</td>
+                      <td>Jen Kindret<br>Josh Funk (V)</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Rensselaer Polytechnic Institute</td>
+                      <td>Bryan Vines</td>
+                      <td> </td>
+                      <td>Marc Cavosie<br>Tara Connolly<br>Aly Tremblay (V)</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Indy</td>
+                      <td>Sacred Heart Pioneers</td>
+                      <td>Thomas O’Malley</td>
+                      <td> </td>
+                      <td>Victoria Blake</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Indy</td>
+                      <td>Saint Anselm Hawks</td>
+                      <td>Kerstin Matthews</td>
+                      <td> </td>
+                      <td>Kayla Meneghin<br>Sarah Glenn<br>Joe Deleault</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>Indy</td>
+                      <td>Saint Michael’s Purple Knights</td>
+                      <td>Chris Donovan</td>
+                      <td> </td>
+                      <td>Madelena DeThomasis<br>Megan Doherty<br>Kate Talbot</td>
+                      <td>Leon Lifschutz</td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>WCHA</td>
+                      <td>St. Cloud State Huskies</td>
+                      <td>Steve Macdonald</td>
+                      <td>Jinelle Siergiej</td>
+                      <td>Molly Engstrom<br>Kenna Farrey (V)</td>
+                      <td>Anders Frankie (V)</td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>St. Lawrence Saints</td>
+                      <td>Chris Wells</td>
+                      <td>Ted Wisner</td>
+                      <td>Mare MacDougall Bari<br>Joe Marsh (V)</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>CHA</td>
+                      <td>Syracuse Orange</td>
+                      <td>Paul Flanagan</td>
+                      <td>Brendon Knight</td>
+                      <td>Julie Knerr</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>HE</td>
+                      <td>UConn Huskies</td>
+                      <td>Chris MacKenzie</td>
+                      <td> </td>
+                      <td>Casey Handrahan<br>Katelyn Parker</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Union Bulldogs</td>
+                      <td>Josch Sciba</td>
+                      <td> </td>
+                      <td>Mitch Baker<br>Rebecca Baker (Interim)</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>HE</td>
+                      <td>Vermont Catamounts</td>
+                      <td>Jim Plumer</td>
+                      <td>Jessica Koizumi</td>
+                      <td>Alex Gettens<br>Taylor Willard (V)</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>WCHA</td>
+                      <td>Wisconsin Badgers</td>
+                      <td>Mark Johnson</td>
+                      <td>Dan Koch</td>
+                      <td>Jackie Krum<br>Mark Greenhalgh (V)</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>ECAC</td>
+                      <td>Yale Bulldogs</td>
+                      <td>Mark Bolding</td>
+                      <td> </td>
+                      <td>Danielle Blanchard<br>Grant Kimball<br>Matt Voity (V)</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!--///////////////////////////////////////////////////////////-->
+                <!-- ============== 2019 - 2020 COACHES END ================== -->
+                <!--///////////////////////////////////////////////////////////-->
+              </div>
+            </div>
+          <a href="#" class="go-top">Go Top</a>
+          <br><br>
+        </div>
+      </section>
+      <!--///////////////////////////////////////////////////////////-->
+      <!-- ====================== MAIN END ========================= -->
+      <!--///////////////////////////////////////////////////////////-->
+      <footer class="footer-container">
+        <span><small>2019 - Behind the Benches</small></span>
+      </footer>
+    </div>
+    <!--///////////////////////////////////////////////////////////-->
+    <!-- =================== VENDER SCRIPTS ====================== -->
+    <!--///////////////////////////////////////////////////////////-->
+    <!-- MODERNIZR-->
+    <script src="./../js/modernizr.custom.js"></script>
+    <!-- JQUERY-->
+    <script src="./../js/jquery.js"></script>
+    <!-- BOOTSTRAP-->
+    <script src="./../js/popper.js"></script>
+    <script src="./../js/bootstrap.js"></script>
+    <!-- STORAGE API-->
+    <script src="./../js/js.storage.js"></script>
+    <!-- JQUERY EASING-->
+    <script src="./../js/jquery.easing.js"></script>
+    <!-- ANIMO-->
+    <script src="./../js/animo.js"></script>
+    <!-- SCREENFULL-->
+    <script src="./../js/screenfull.js"></script>
+    <!-- LOCALIZE-->
+    <script src="./../js/jquery.localize.js"></script>
+    <!--///////////////////////////////////////////////////////////-->
+    <!-- ================= PAGE VENDER SCRIPTS =================== -->
+    <!--///////////////////////////////////////////////////////////-->
+    <!-- Datatables-->
+    <script src="./../js/jquery.dataTables.js"></script>
+    <script src="./../js/dataTables.bootstrap4.js"></script>
+    <script src="./../js/dataTables.buttons.js"></script>
+    <script src="./../js/buttons.bootstrap.js"></script>
+    <script src="./../js/buttons.colVis.js"></script>
+    <script src="./../js/buttons.flash.js"></script>
+    <script src="./../js/buttons.html5.js"></script>
+    <script src="./../js/buttons.print.js"></script>
+    <script src="./../js/dataTables.keyTable.js"></script>
+    <script src="./../js/dataTables.responsive.js"></script>
+    <script src="./../js/responsive.bootstrap.js"></script>
+    <script src="./../js/jszip.js"></script>
+    <script src="./../js/pdfmake.js"></script>
+    <script src="./../js/vfs_fonts.js"></script>
+    <!--///////////////////////////////////////////////////////////-->
+    <!-- ====================== APP SCRIPTS ====================== -->
+    <!--///////////////////////////////////////////////////////////-->
+    <script src="./../js/app.js"></script>
+  </body>
+  <!--///////////////////////////////////////////////////////////-->
+  <!-- ======================= BODY END ======================== -->
+  <!--///////////////////////////////////////////////////////////-->
+</html>
