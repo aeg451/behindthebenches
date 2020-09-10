@@ -1,0 +1,921 @@
+    .Air.Force.Falcons{
+      background: #8F8F8C;
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Air.Force.Falcons1{
+      background:  #0033A0;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Alabama.Huntsville.Chargers{
+      background: #1A64B7; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Alabama.Huntsville.Chargers1{
+      background:  #000000;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Alaska.Nanooks{
+      background: #1E59AE; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Alaska.Nanooks1{
+      background:  #FCD006;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Alaska.Anchorage.Seawolves{
+      background: #1E513D; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Alaska.Anchorage.Seawolves1{
+      background:  #FBC01C;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .American.International.Yellow.Jackets{
+      background: #F2AF36; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .American.International.Yellow.Jackets1{
+      background:  #1A1919;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Arizona.State.Sun.Devils{
+      background: #8E0C3A; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Arizona.State.Sun.Devils1{
+      background:  #FFC72C;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Army.Black.Knights{
+      background: #D4BF91; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Army.Black.Knights1{
+      background:  #000000;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Bemidji.State.Beavers{
+      background: #004C40; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Bemidji.State.Beavers1{
+      background:  #d4b575;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Bentley.Falcons{
+      background: #253B7D; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Bentley.Falcons1{
+      background: #100F0D;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Boston.College.Eagles{
+      background: #8C2232; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Boston.College.Eagles img{ 
+      background: white;
+      border:1px solid white;
+    }
+    .Boston.College.Eagles1{
+      background:  #DBCCA4;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Boston.University.Terriers{
+      background: #CC0000; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Boston.University.Terriers img{ 
+      background: white;
+      border:1px solid white;
+    }
+    .Boston.University.Terriers1{
+      background:  #ffffff;
+      color: #CC0000;
+      text-align: left;
+      font-size: 12px;
+      border-bottom: 1px solid #CC0000
+    }
+    /**/
+    .Bowling.Green.Falcons{
+      background: #FE5000; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Bowling.Green.Falcons1{
+      background:  #4F2C1D;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Brown.Bears{
+      background: #381C00; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Brown.Bears img{
+      background: white;
+      border:1px solid white;
+    }
+    .Brown.Bears1{
+      background:  #E4002B;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Canisius.Golden.Griffins{
+      background: #FFBA00; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Canisius.Golden.Griffins1{
+      background:  #0E2756;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Clarkson.Golden.Knights{
+      background: #02522b; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Clarkson.Golden.Knights1{
+      background:  #efc610;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Colgate.Raiders{
+      background: #862633; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Colgate.Raiders1{
+      background:  #C8C7C7;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Colorado.College.Tigers{
+      background: #ffc72c; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Colorado.College.Tigers1{
+      background:  #000000;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Cornell.Big.Red{
+      background: #B31B1B; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Cornell.Big.Red1{
+      background:  #ffffff;
+      color: #B31B1B;
+      text-align: left;
+      font-size: 12px;
+      border-bottom: 1px solid #B31B1B;
+    }
+    /**/
+    .Dartmouth.Big.Green{
+      background: #005F2F; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Dartmouth.Big.Green1{
+      background:  #ffffff;
+      color: #005F2F;
+      text-align: left;
+      font-size: 12px;
+      border-bottom: 1px solid #005F2F;
+    }
+    /**/
+    .Denver.Pioneers{
+      background: #8B6F4B;
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Denver.Pioneers1{
+      background:  #8B2332; 
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Ferris.State.Bulldogs{
+      background: #D41042; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Ferris.State.Bulldogs1{
+      background:  #FBBF16;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Franklin.Pierce.Ravens{
+      background: #6A142C; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Franklin.Pierce.Ravens img{ 
+      background: white;
+      border:1px solid white;
+    }
+    .Franklin.Pierce.Ravens1{
+      background:  #6D6E71;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Harvard.Crimson{
+      background: #A51C30; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Harvard.Crimson1{
+      background:  #1E1E1E;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Holy.Cross.Crusaders{
+      background: #602D89; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Holy.Cross.Crusaders1{
+      background:  #ffffff;
+      color: #602D89;
+      text-align: left;
+      font-size: 12px;
+      border-bottom: 1px solid #602D89;
+    }
+    /**/
+    .Lake.Superior.State.Lakers{
+      background: #324EA9; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Lake.Superior.State.Lakers1{
+      background:  #FBC018;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Lindenwood.Lions{
+      background: #231F20; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Lindenwood.Lions1{
+      background:  #C8B362;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Maine.Black.Bears{
+      background: #B0D7FF; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Maine.Black.Bears1{
+      background:  #002b5c;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Mercyhurst.Lakers{
+      background: #1A554B; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Mercyhurst.Lakers1{
+      background:  #1C294D;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Merrimack.Warriors{
+      background: #0B335E; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Merrimack.Warriors1{
+      background:  #FAB20B;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Miami.RedHawks{
+      background: #B61E2E; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Miami.RedHawks1{
+      background: #000000 ;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Michigan.State.Spartans{
+      background: #18453B; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Michigan.State.Spartans img{ 
+      background: white;
+      border:1px solid white;
+    }
+    .Michigan.State.Spartans1{
+      background: #ffffff;
+      color: #18453B;
+      text-align: left;
+      font-size: 12px;
+      border-bottom: 1px solid #18453B;
+    }
+    /**/
+    .Michigan.Wolverines{
+      background: #00274C; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Michigan.Wolverines1{
+      background: #FFCB05;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Minnesota.Duluth.Bulldogs{
+      background: #8E0A26; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Minnesota.Duluth.Bulldogs1{
+      background: #FAB937;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Minnesota.Golden.Gophers{
+      background: #691c33; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Minnesota.Golden.Gophers1{
+      background:  #ffc72a;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Minnesota.State.Mavericks{
+      background: #683B7A; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Minnesota.State.Mavericks1{
+      background:  #FAD40B;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .New.Hampshire.Wildcats{
+      background: #001D52; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .New.Hampshire.Wildcats1{
+      background:  #ffffff;
+      color: #001D52;
+      text-align: left;
+      font-size: 12px;
+      border-bottom: 1px solid #001D52;
+    }
+    /**/
+    .Niagara.Purple.Eagles{
+      background: #582C83; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Niagara.Purple.Eagles1{
+      background:  #000000;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .North.Dakota.Fighting.Hawks{
+      background: #000000; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .North.Dakota.Fighting.Hawks1{
+      background: #009A44;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Northeastern.Huskies{
+      background: #E50000; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Northeastern.Huskies1{
+      background: #000000;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Northern.Michigan.Wildcats{
+      background: #1E513D; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Northern.Michigan.Wildcats1{
+      background: #FBC01C;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Notre.Dame.Fighting.Irish{
+      background: #0C2340; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Notre.Dame.Fighting.Irish img{ 
+      background: white;
+      border:1px solid white;
+    }
+    .Notre.Dame.Fighting.Irish1{
+      background: #C99700;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Ohio.State.Buckeyes{
+      background: #CE0F3D; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Ohio.State.Buckeyes1{
+      background: #B0B7BC;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Omaha.Mavericks{
+      background: #000000; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Omaha.Mavericks1{
+      background:  #D71920;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Penn.State.Nittany.Lions{
+      background: #002D62; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Penn.State.Nittany.Lions1{
+      background: #ffffff;
+      color: #002D62;
+      text-align: left;
+      font-size: 12px;
+      border-bottom: 1px solid #002D62;
+    }
+    /**/
+    .Post.Eagles{
+      background: #F47216; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Post.Eagles1{
+      background:  #5B254B;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Princeton.Tigers{
+      background: #FF6000; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Princeton.Tigers1{
+      background:  #000000;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Providence.Friars{
+      background: #000000; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Providence.Friars1{
+      background: #8A8D8F;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Quinnipiac.Bobcats{
+      background: #0A2240; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Quinnipiac.Bobcats1{
+      background: #FFB819;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Rensselaer.Polytechnic.Institute{
+      background: #d6001c; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Rensselaer.Polytechnic.Institute img{ 
+      background: white;
+      border:1px solid white;
+    }
+    .Rensselaer.Polytechnic.Institute1{
+      background:  #ffffff;
+      color: #d6001c;
+      text-align: left;
+      font-size: 12px;
+      border-bottom: 1px solid #d6001c;
+    }
+    /**/
+    .RIT.Tigers{
+      background: #f36e21; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .RIT.Tigers1{
+      background:  #513127;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Robert.Morris.Colonials{
+      background: #14234B; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Robert.Morris.Colonials img{ 
+      background: white;
+      border:1px solid white;
+    }
+    .Robert.Morris.Colonials1{
+      background:  #A6192E;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Sacred.Heart.Pioneers{
+      background: #CD1041; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Sacred.Heart.Pioneers1{
+      background:  #ffffff;
+      color: #CD1041;
+      text-align: left;
+      font-size: 12px;
+      border-bottom: 1px solid #CD1041;
+    }
+    /**/
+    .Saint.Anselm.Hawks{
+      background: #002A5B; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Saint.Anselm.Hawks1{
+      background:  #949ca0;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Saint.Purple.Knights{
+      background: #55318C; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Saint.Purple.Knights1{
+      background:  #D6C682;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Cloud.State.Huskies{
+      background: #CE0F3E; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Cloud.State.Huskies1{
+      background:  #231F20;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Lawrence.Saints{
+      background: #af1e2d; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Lawrence.Saints1{
+      background:  #4b2b23;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Syracuse.Orange{
+      background: #D44500; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Syracuse.Orange1{
+      background:  #0c233f;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .UConn.Huskies{
+      background: #000E2F; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .UConn.Huskies1{
+      background:  #ffffff;
+      color: #000E2F;
+      text-align: left;
+      font-size: 12px;
+      border-bottom: 1px solid #000E2F;
+    }
+    /**/
+    .UMass.Lowell.River.Hawks{
+      background: #00549F; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .UMass.Lowell.River.Hawks img{ 
+      background: white;
+      border:1px solid white;
+    }
+    .UMass.Lowell.River.Hawks1{
+      background:  #CF202F;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .UMass.Minutemen{
+      background: #971B2F; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .UMass.Minutemen1{
+      background:  #000000;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Union.Bulldogs{
+      background: #801e2c; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Union.Bulldogs1{
+      background:  #000000;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Vermont.Catamounts{
+      background: #005710; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Vermont.Catamounts1{
+      background:  #FFC20E;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Western.Michigan.Broncos{
+      background: #6C4023; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Western.Michigan.Broncos1{
+      background:  #B5A167;
+      color: white;
+      text-align: left;
+      font-size: 12px;
+    }
+    /**/
+    .Wisconsin.Badgers{
+      background: #C4012F; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Wisconsin.Badgers img{ 
+      background: white;
+      border:1px solid white;
+    }
+    .Wisconsin.Badgers1{
+      background:  #ffffff;
+      color: #C4012F;
+      text-align: left;
+      font-size: 12px;
+      border-bottom: 1px solid #C4012F;
+    }
+    /**/
+    .Yale.Bulldogs{
+      background: #00356B; 
+      color: white;
+      text-align: center;
+      font-size: 25px;
+    }
+    .Yale.Bulldogs1{
+      background:  #ffffff;
+      color: #00356B;
+      text-align: left;
+      font-size: 12px;
+      border-bottom: 1px solid #00356B;
+    }
+    /**/
+    /**/
+    #example td { vertical-align: top; }
+    #tableBorder{
+      border:  outset; 
+      padding: 0px; 
+    }
+    #tablePadding{
+      padding: 10px;
+    }
+    .go-top {
+      position: fixed;
+      bottom: 2em;
+      right: 2em;
+      text-decoration: none;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.3);
+      font-size: 12px;
+      padding: 1em;
+      display: none;
+    }
+
+    .go-top:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
